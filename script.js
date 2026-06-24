@@ -117,7 +117,8 @@ function renderizarDetalhes(fixtureId, dados) {
         let dotHtml = '';
         if (isLive) {
             dotHtml = '<span class="live-dot"></span>';
-            statusTexto = elapsed ? `${elapsed}' — Ao Vivo` : 'Ao Vivo';
+            const extra = match.fixture.status.extra;
+            statusTexto = elapsed ? (extra ? `${elapsed}+${extra}' — Ao Vivo` : `${elapsed}' — Ao Vivo`) : 'Ao Vivo';
         } else if (statusShort === 'HT') {
             statusTexto = 'Intervalo';
         } else if (STATUS_FIM.includes(statusShort)) {
@@ -294,7 +295,9 @@ function criarBlocoPartida(match, isLive, quemMarcou) {
     let infoCentral = '';
     let infoMinuto = '';
     if (isLiveStatus) {
-        infoMinuto = match.fixture.status.elapsed ? `${match.fixture.status.elapsed}'` : '';
+        const elapsed = match.fixture.status.elapsed;
+        const extra = match.fixture.status.extra;
+        infoMinuto = elapsed ? (extra ? `${elapsed}+${extra}'` : `${elapsed}'`) : '';
         infoCentral = '<span class="live-dot"></span> Ao Vivo';
     } else if (isPaused) {
         infoMinuto = 'HT';
