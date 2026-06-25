@@ -636,35 +636,48 @@ function renderizarRecentesTorneio() {
 }
 
 function renderizarBracket() {
+    // 1. Filtra os jogos que não são da fase de grupos
     const eliminatorias = Object.values(cachePartidas)
         .filter(m => !((m.league?.round ?? '').toLowerCase().includes('group')))
         .sort((a, b) => new Date(a.fixture.date) - new Date(b.fixture.date));
 
-    let slotIdx = 0;
-    const gerarSlot = () => {
-        const m = eliminatorias[slotIdx++];
+    // 2. Separa os jogos por fase exata
+    const fases = {
+        'Round of 32': eliminatorias.filter(j => j.league.round.includes('Round of 32')),
+        'Round of 16': eliminatorias.filter(j => j.league.round.includes('Round of 16')),
+        'Quarter-finals': eliminatorias.filter(j => j.league.round.includes('Quarter-finals')),
+        'Semi-finals': eliminatorias.filter(j => j.league.round.includes('Semi-finals')),
+        'Final': eliminatorias.filter(j => j.league.round === 'Final'),
+        '3rd Place Final': eliminatorias.filter(j => j.league.round.includes('3rd Place'))
+    };
+
+    // 3. Função que gera um slot individual, recebendo o jogo específico
+    const gerarSlot = (m) => {
         if (m) {
             const d = new Date(m.fixture.date);
-            const dia = String(d.getDate()).padStart(2,'0');
-            const mes = String(d.getMonth()+1).padStart(2,'0');
-            const hora = d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+            const dia = String(d.getDate()).padStart(2, '0');
+            const mes = String(d.getMonth() + 1).padStart(2, '0');
+            const hora = d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
             const golA = m.goals.home !== null ? m.goals.home : '';
             const golB = m.goals.away !== null ? m.goals.away : '';
-            const placar = golA !== '' ? `${golA}x${golB}` : '';
-            return `<div class="match-slot">
+            
+            // Adicionado o onclick para abrir os detalhes do jogo direto do chaveamento!
+            return `<div class="match-slot" style="cursor: pointer;" onclick="abrirMenuDetalhes(${m.fixture.id})">
                 <div class="slot-team-row">
-                    <img src="${m.teams.home.logo}" class="slot-logo">
+                    <img src="${m.teams.home.logo}" class="slot-logo" alt="${m.teams.home.name}">
                     <span class="slot-sig">${sigla(m.teams.home.name)}</span>
                     ${golA !== '' ? `<span class="slot-score">${golA}</span>` : ''}
                 </div>
                 <div class="slot-team-row">
-                    <img src="${m.teams.away.logo}" class="slot-logo">
+                    <img src="${m.teams.away.logo}" class="slot-logo" alt="${m.teams.away.name}">
                     <span class="slot-sig">${sigla(m.teams.away.name)}</span>
                     ${golB !== '' ? `<span class="slot-score">${golB}</span>` : ''}
                 </div>
                 <span class="slot-data">${dia}/${mes} ${hora}</span>
             </div>`;
         }
+        
+        // Retorna o TBD se a partida ainda não estiver definida na API
         return `<div class="match-slot slot-tbd">
             <div class="slot-team-row"><span class="slot-sig tbd">TBD</span></div>
             <div class="slot-team-row"><span class="slot-sig tbd">TBD</span></div>
@@ -672,59 +685,46 @@ function renderizarBracket() {
         </div>`;
     };
 
-    // Coluna com espaçamento proporcional: qtd slots com gaps entre eles
-    const gerarColuna = (qtd) => {
+    // 4. Função que gera a coluna puxando os jogos da fase específica com o offset (deslocamento)
+    const gerarColuna = (qtd, jogosDaFase, offset = 0) => {
         let html = `<div class="bracket-col">`;
-        for (let i = 0; i < qtd; i++) html += gerarSlot();
+        for (let i = 0; i < qtd; i++) {
+            html += gerarSlot(jogosDaFase[i + offset]);
+        }
         html += `</div>`;
         return html;
     };
 
-    slotIdx = 0;
+    // 5. Constrói o Lado Esquerdo (Primeira metade dos confrontos)
     document.getElementById('bracket-left').innerHTML =
-        gerarColuna(8) + gerarColuna(4) + gerarColuna(2) + gerarColuna(1);
+        gerarColuna(8, fases['Round of 32'], 0) + 
+        gerarColuna(4, fases['Round of 16'], 0) + 
+        gerarColuna(2, fases['Quarter-finals'], 0) + 
+        gerarColuna(1, fases['Semi-finals'], 0);
+
+    // 6. Constrói o Lado Direito (Segunda metade dos confrontos, lido de trás pra frente)
     document.getElementById('bracket-right').innerHTML =
-        gerarColuna(1) + gerarColuna(2) + gerarColuna(4) + gerarColuna(8);
+        gerarColuna(1, fases['Semi-finals'], 1) + 
+        gerarColuna(2, fases['Quarter-finals'], 2) + 
+        gerarColuna(4, fases['Round of 16'], 4) + 
+        gerarColuna(8, fases['Round of 32'], 8);
+
+    // 7. Finais e Disputa de 3º Lugar (Centro)
+    const finalDiv = document.getElementById('bracket-final');
+    if (finalDiv) {
+        const finalJogo = fases['Final'][0];
+        finalDiv.innerHTML = `
+            <span class="center-title">FINAL</span>
+            ${gerarSlot(finalJogo)}
+        `;
+    }
+
+    const bronzeDiv = document.getElementById('bracket-bronze');
+    if (bronzeDiv) {
+        const bronzeJogo = fases['3rd Place Final'][0];
+        bronzeDiv.innerHTML = `
+            <span class="center-title" style="color: var(--text-muted); margin-top: 15px;">3º LUGAR</span>
+            ${gerarSlot(bronzeJogo)}
+        `;
+    }
 }
-
-function renderizarGrupos(todasEntradas, top8TerceiroIds) {
-    const scroller = document.getElementById('grupos-rodape');
-    const cores = [
-        '#FF4A7A','#00E5FF','#A020F0','#4CAF50','#FF9800','#03A9F4',
-        '#FF4A7A','#00E5FF','#A020F0','#4CAF50','#FF9800','#03A9F4'
-    ];
-
-    // Filtra apenas grupos reais (Group A … Group L)
-    const gruposValidos = todasEntradas.filter(grupo =>
-        /^Group\s+[A-L]$/i.test(grupo[0]?.group ?? '')
-    );
-
-    scroller.innerHTML = gruposValidos.map((grupo, i) => {
-        const nomeGrupo = grupo[0].group.replace(/Group/i, 'Grupo');
-        const linhasTime = grupo.map((time, idx) => {
-            const top2 = idx < 2;
-            const top4Terceiro = idx === 2 && (top8TerceiroIds?.has(time.team.id) ?? false);
-            let corBorda = 'transparent';
-            let corNome = 'var(--text-muted)';
-            let pesoFonte = '400';
-            if (top2) { corBorda = 'var(--green-1)'; corNome = 'var(--text-primary)'; pesoFonte = '700'; }
-            else if (top4Terceiro) { corBorda = 'var(--amber)'; corNome = 'var(--amber)'; pesoFonte = '600'; }
-
-            return `
-                <div class="grupo-linha-time" style="border-left-color:${corBorda}">
-                    <div class="grupo-linha-esq">
-                        <span class="grupo-rank">${time.rank}</span>
-                        <img src="${time.team.logo}" class="grupo-logo" alt="${time.team.name}">
-                        <span class="grupo-sigla" style="color:${corNome};font-weight:${pesoFonte};">${sigla(time.team.name)}</span>
-                    </div>
-                    <span class="grupo-pts">${time.points}</span>
-                </div>`;
-        }).join('');
-
-        return `
-            <div class="grupo-card">
-                <div class="grupo-card-titulo">${nomeGrupo}</div>
-                ${linhasTime}
-            </div>`;
-    }).join('');
-                                         }
