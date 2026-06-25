@@ -35,6 +35,63 @@ const SIGLAS_FIFA = {
     "Senegal": "SEN", "Tunisia": "TUN", "New Zealand": "NZL"
 };
 
+
+// Cores tema oficiais por seleção (primary kit / associação nacional)
+const CORES_SELECOES = {
+    6:    '#FFD700', // Brasil — amarelo
+    26:   '#75AADB', // Argentina — azul celeste
+    9:    '#C60B1E', // Espanha — vermelho
+    2:    '#003189', // França — azul marinho
+    25:   '#000000', // Alemanha — preto
+    27:   '#C8102E', // Portugal — vermelho
+    10:   '#003090', // Inglaterra — azul
+    15:   '#FF0000', // Suíça — vermelho
+    1118: '#FF6900', // Holanda — laranja
+    12:   '#BC002D', // Japão — vermelho
+    8:    '#FCD116', // Colômbia — amarelo
+    16:   '#006847', // México — verde
+    2384: '#002868', // EUA — azul
+    31:   '#C1272D', // Marrocos — vermelho
+    1090: '#003087', // Noruega — azul
+    5529: '#FF0000', // Canadá — vermelho
+    5:    '#006AA7', // Suécia — azul
+    3:    '#FF0000', // Croácia — vermelho xadrez
+    7:    '#5EB6E4', // Uruguai — azul celeste
+    17:   '#C60C30', // Coreia do Sul — vermelho
+    22:   '#239F40', // Irã — verde
+    32:   '#C8102E', // Egito — vermelho
+    1531: '#007A4D', // África do Sul — verde
+    20:   '#FFD700', // Austrália — amarelo/dourado
+    1108: '#003F87', // Escócia — azul
+    1:    '#000000', // Bélgica — preto
+    1532: '#006233', // Argélia — verde
+    1113: '#002395', // Bósnia — azul
+    2380: '#D52B1E', // Paraguai — vermelho
+    1533: '#003893', // Cabo Verde — azul
+    1504: '#FCD116', // Gana — amarelo
+    775:  '#C8102E', // Áustria — vermelho
+    1508: '#007FFF', // Congo DR — azul
+    2382: '#FFD100', // Equador — amarelo
+    5530: '#003087', // Curaçao — azul
+    28:   '#C8102E', // Tunísia — vermelho
+    1569: '#8D1B3D', // Qatar — vinho
+    770:  '#D7141A', // Tchéquia — vermelho
+    1548: '#007A3D', // Jordânia — verde
+    1567: '#007A3D', // Iraque — verde
+    1568: '#1EB53A', // Uzbequistão — verde
+    4673: '#00247D', // Nova Zelândia — azul
+    2386: '#00209F', // Haiti — azul
+    11:   '#005F9E', // Panamá — azul
+    777:  '#C8102E', // Turquia — vermelho
+    23:   '#006C35', // Arábia Saudita — verde
+    13:   '#00853F', // Senegal — verde
+    1501: '#F77F00', // Costa do Marfim — laranja
+};
+
+function corSelecao(teamId) {
+    return CORES_SELECOES[teamId] || 'var(--green-1)';
+}
+
 document.getElementById('btn-teste-audio').addEventListener('click', () => {
     somGol.currentTime = 0;
     somGol.play().catch(() => {});
@@ -112,6 +169,12 @@ function renderizarDetalhes(fixtureId, dados) {
         const statusShort = match.fixture.status.short;
         const isLive = STATUS_LIVE.includes(statusShort);
         const elapsed = match.fixture.status.elapsed;
+        // Cores tema para as barras de estatística
+        const corHome = corSelecao(match.teams.home.id);
+        const corAway = corSelecao(match.teams.away.id);
+        // Injetar CSS vars dinamicamente para as barras
+        document.getElementById('conteudo-estatisticas').style.setProperty('--bar-home', corHome);
+        document.getElementById('conteudo-estatisticas').style.setProperty('--bar-away', corAway);
 
         let statusTexto = '';
         let dotHtml = '';
@@ -450,7 +513,7 @@ document.getElementById('btn-toggle-torneio').addEventListener('click', async fu
     const ativo = layout.classList.toggle('modo-torneio');
     document.body.classList.toggle('modo-torneio-ativo', ativo);
     this.innerHTML = ativo
-        ? '⬅ Voltar'
+        ? '←'
         : '<img src="assets/trophy-icon.png" alt="Torneio" class="btn-icon-img">';
     this.style.color = ativo ? '#fff' : '';
 
@@ -524,38 +587,43 @@ function renderizarRecentesTorneio() {
 }
 
 function renderizarBracket() {
-    // Pega partidas de mata-mata do cache (fases eliminatórias)
     const eliminatorias = Object.values(cachePartidas)
-        .filter(m => {
-            const r = (m.league?.round ?? '').toLowerCase();
-            return !r.includes('group');
-        })
+        .filter(m => !((m.league?.round ?? '').toLowerCase().includes('group')))
         .sort((a, b) => new Date(a.fixture.date) - new Date(b.fixture.date));
 
     let slotIdx = 0;
     const gerarSlot = () => {
         const m = eliminatorias[slotIdx++];
         if (m) {
-            const siglaA = sigla(m.teams.home.name);
-            const siglaB = sigla(m.teams.away.name);
             const d = new Date(m.fixture.date);
             const dia = String(d.getDate()).padStart(2,'0');
             const mes = String(d.getMonth()+1).padStart(2,'0');
             const hora = d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
             const golA = m.goals.home !== null ? m.goals.home : '';
             const golB = m.goals.away !== null ? m.goals.away : '';
-            const placar = (golA !== '' || golB !== '') ? ` ${golA}x${golB}` : '';
+            const placar = golA !== '' ? `${golA}x${golB}` : '';
             return `<div class="match-slot">
-                <span class="slot-teams">${siglaA}${placar ? '' : ''} x ${siglaB}${placar}</span>
+                <div class="slot-team-row">
+                    <img src="${m.teams.home.logo}" class="slot-logo">
+                    <span class="slot-sig">${sigla(m.teams.home.name)}</span>
+                    ${golA !== '' ? `<span class="slot-score">${golA}</span>` : ''}
+                </div>
+                <div class="slot-team-row">
+                    <img src="${m.teams.away.logo}" class="slot-logo">
+                    <span class="slot-sig">${sigla(m.teams.away.name)}</span>
+                    ${golB !== '' ? `<span class="slot-score">${golB}</span>` : ''}
+                </div>
                 <span class="slot-data">${dia}/${mes} ${hora}</span>
             </div>`;
         }
-        return `<div class="match-slot">
-            <span class="slot-teams">TBD x TBD</span>
+        return `<div class="match-slot slot-tbd">
+            <div class="slot-team-row"><span class="slot-sig tbd">TBD</span></div>
+            <div class="slot-team-row"><span class="slot-sig tbd">TBD</span></div>
             <span class="slot-data">—</span>
         </div>`;
     };
 
+    // Coluna com espaçamento proporcional: qtd slots com gaps entre eles
     const gerarColuna = (qtd) => {
         let html = `<div class="bracket-col">`;
         for (let i = 0; i < qtd; i++) html += gerarSlot();
