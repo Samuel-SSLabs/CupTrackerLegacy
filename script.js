@@ -576,19 +576,43 @@ function renderizarGrupos(gruposApi) {
     );
 
     // Regra Copa 2026: top 2 de cada grupo classificam direto.
-    // Os 4 melhores 3ºs colocados também avançam → marcamos com âmbar.
-    // Coleta todos os 3ºs para ordenar por pontos/saldo depois de montar os cards.
+    // Os 8 melhores 3ºs (de 12 grupos) também avançam → marcamos com âmbar.
+    // Critérios de desempate oficiais FIFA (em ordem):
+    //   1. Pontos  2. Saldo de gols  3. Gols marcados
+    //   4. Fair Play (amarelo=-1, vermelho indireto=-3, vermelho direto=-4, amar+verm=-5)
+    //   5. Ranking FIFA (goalsDiff como proxy — API não expõe ranking diretamente)
+
+    function calcFairPlay(time) {
+        // A API de standings expõe penalty points negativos no campo penalty
+        // Usamos o que tiver disponível; se não houver, retorna 0
+        const p = time.penalty ?? {};
+        const amarelos = p.yellow ?? 0;
+        const vermelhoIndireto = p.yellowRed ?? 0; // 2º amarelo = -3
+        const vermelhoDireto   = p.red ?? 0;       // vermelho direto = -4
+        // amar+verm direto (-5) já está contido em amarelos+vermelhoDireto na maioria das APIs
+        return -(amarelos * 1 + vermelhoIndireto * 3 + vermelhoDireto * 4);
+    }
+
     const terceiros = gruposValidos
         .map(g => g[2])
         .filter(Boolean)
         .sort((a, b) => {
+            // 1. Pontos (maior vence)
             const pts = b.points - a.points;
             if (pts !== 0) return pts;
+            // 2. Saldo de gols (maior vence)
             const sd = (b.goalsDiff ?? 0) - (a.goalsDiff ?? 0);
             if (sd !== 0) return sd;
-            return (b.goalsFor ?? 0) - (a.goalsFor ?? 0);
+            // 3. Gols marcados (maior vence)
+            const gf = (b.goalsFor ?? 0) - (a.goalsFor ?? 0);
+            if (gf !== 0) return gf;
+            // 4. Fair Play — menos punições (valor menos negativo vence)
+            const fp = calcFairPlay(b) - calcFairPlay(a);
+            if (fp !== 0) return fp;
+            // 5. Ranking FIFA — sem dado direto; mantém ordem da API
+            return 0;
         });
-    const top4TerceiroIds = new Set(terceiros.slice(0, 4).map(t => t.team.id));
+    const top8TerceiroIds = new Set(terceiros.slice(0, 8).map(t => t.team.id));
 
     scroller.innerHTML = gruposValidos.map((grupo, i) => {
         const nomeGrupo = grupo[0].group.replace(/Group/i, 'Grupo');
@@ -596,7 +620,7 @@ function renderizarGrupos(gruposApi) {
 
         const linhasTime = grupo.map((time, idx) => {
             const top2 = idx < 2;
-            const top4Terceiro = idx === 2 && top4TerceiroIds.has(time.team.id);
+            const top4Terceiro = idx === 2 && top8TerceiroIds.has(time.team.id);
             let corBorda = 'transparent';
             let corNome = 'var(--text-muted)';
             let pesoFonte = '400';
@@ -620,4 +644,4 @@ function renderizarGrupos(gruposApi) {
                 ${linhasTime}
             </div>`;
     }).join('');
-}
+            }
