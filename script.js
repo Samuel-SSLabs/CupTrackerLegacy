@@ -651,31 +651,20 @@ function renderizarBracket(standingsData) {
             ? `<span class="slot-sig tbd">TBD</span>`
             : `<img src="${m.teams.away.logo}" class="slot-logo"><span class="slot-sig">${sigla(m.teams.away.name)}</span>${temGol ? `<span class="slot-score${wA ? ' slot-score-win' : ''}">${golA}</span>` : ''}`;
 
+        // Se for 100% TBD ou a API avisar, mostra "A definir". Senão, mostra a data confirmada.
+        const dataTexto = (m.fixture.status.short === 'TBD' || (isTbdA && isTbdB)) ? 'A definir' : `${dia}/${mes} ${hora}`;
+
         return `<div class="match-slot">
             <div class="slot-team-row${wH && !isTbdA ? ' slot-winner' : ''}">${rowA}</div>
             <div class="slot-team-row${wA && !isTbdB ? ' slot-winner' : ''}">${rowB}</div>
-            <span class="slot-data">${dia}/${mes} ${hora}</span>
-        </div>`;
-    };
-
-    const slotClassificados = (tA, tB) => {
-        const rowA = tA
-            ? `<img src="${tA.team.logo}" class="slot-logo"><span class="slot-sig">${sigla(tA.team.name)}</span>`
-            : `<span class="slot-sig tbd">TBD</span>`;
-        const rowB = tB
-            ? `<img src="${tB.team.logo}" class="slot-logo"><span class="slot-sig">${sigla(tB.team.name)}</span>`
-            : `<span class="slot-sig tbd">TBD</span>`;
-        return `<div class="match-slot">
-            <div class="slot-team-row">${rowA}</div>
-            <div class="slot-team-row">${rowB}</div>
-            <span class="slot-data">A definir</span>
+            <span class="slot-data">${dataTexto}</span>
         </div>`;
     };
 
     const slotTbd = () => `<div class="match-slot slot-tbd">
         <div class="slot-team-row"><span class="slot-sig tbd">TBD</span></div>
         <div class="slot-team-row"><span class="slot-sig tbd">TBD</span></div>
-        <span class="slot-data">—</span>
+        <span class="slot-data">A definir</span>
     </div>`;
 
     const coluna = (slots) => {
@@ -699,65 +688,15 @@ function renderizarBracket(standingsData) {
         else if (r.includes('final')) porFase.final.push(m);
     });
 
-    // ── 2. Times classificados (para R32 quando não há partidas reais) ────────
-    const classificadosPorGrupo = {};
-    if (standingsData) {
-        standingsData
-            .filter(g => /^Group [A-L]$/i.test(g[0]?.group ?? ''))
-            .forEach(g => {
-                const letra = g[0].group.replace('Group ', '');
-                // Pega apenas quem tem a tag explícita na description da API
-                classificadosPorGrupo[letra] = g.filter(t => {
-                    const desc = t.description?.toLowerCase() || '';
-                    return desc.includes('round of 32') || desc.includes('16 avos');
-                });
-            });
-    }
-
-    let terceiros = [];
-    if (standingsData) {
-        const gs = standingsData.find(g => g[0]?.group === 'Group Stage') ?? [];
-        terceiros = gs.filter(t => {
-            const desc = t.description?.toLowerCase() || '';
-            return desc.includes('round of 32') || desc.includes('16 avos');
-        });
-    }
-
-    // Busca o time respeitando sua posição no grupo (1 para 1º, 2 para 2º)
-    const getTeam = (letra, rankEsperado) => {
-        const grupo = classificadosPorGrupo[letra] || [];
-        return grupo.find(t => t.rank === rankEsperado) || null;
-    };
-
-    const getThird = (idx) => terceiros[idx] || null;
-
-    // ── 3. Montar R32 Distribuindo Uniformemente (Evitar que 1A jogue com 2A) ─
+    // ── 2. Montar R32 Estritamente (Sem Previsões Incorretas) ─────────────────
+    // Vamos preencher as 16 vagas com os jogos reais retornados pela API. 
+    // Onde não tiver jogo criado, injetamos TBD puro.
     const slotsR32 = [];
     for (let i = 0; i < 16; i++) {
         if (porFase.r32[i]) {
             slotsR32.push(slotReal(porFase.r32[i]));
         } else {
-            let tA = null, tB = null;
-            switch(i) {
-                // Distribuição padrão de cruzamento: 1º vs 3º ou 1º vs 2º de OUTROS grupos.
-                case 0:  tA = getTeam('A', 1); tB = getThird(0); break;
-                case 1:  tA = getTeam('B', 2); tB = getTeam('C', 2); break;
-                case 2:  tA = getTeam('D', 1); tB = getThird(1); break;
-                case 3:  tA = getTeam('E', 2); tB = getTeam('F', 2); break;
-                case 4:  tA = getTeam('G', 1); tB = getThird(2); break;
-                case 5:  tA = getTeam('H', 2); tB = getTeam('I', 2); break;
-                case 6:  tA = getTeam('J', 1); tB = getThird(3); break;
-                case 7:  tA = getTeam('K', 2); tB = getTeam('L', 2); break;
-                case 8:  tA = getTeam('B', 1); tB = getThird(4); break;
-                case 9:  tA = getTeam('C', 1); tB = getTeam('A', 2); break;
-                case 10: tA = getTeam('E', 1); tB = getThird(5); break;
-                case 11: tA = getTeam('F', 1); tB = getTeam('D', 2); break;
-                case 12: tA = getTeam('H', 1); tB = getThird(6); break;
-                case 13: tA = getTeam('I', 1); tB = getTeam('G', 2); break;
-                case 14: tA = getTeam('K', 1); tB = getThird(7); break;
-                case 15: tA = getTeam('L', 1); tB = getTeam('J', 2); break;
-            }
-            slotsR32.push(slotClassificados(tA, tB));
+            slotsR32.push(slotTbd());
         }
     }
 
@@ -773,7 +712,7 @@ function renderizarBracket(standingsData) {
         });
     };
 
-    // ── 4. Inserir no HTML ────────────────────────────────────────────────────
+    // ── 3. Inserir no HTML ────────────────────────────────────────────────────
     const leftHtml =
         coluna(slotsR32L) +
         coluna(faseSlots('r16', 4, 'L')) +
@@ -789,7 +728,7 @@ function renderizarBracket(standingsData) {
     document.getElementById('bracket-left').innerHTML  = leftHtml;
     document.getElementById('bracket-right').innerHTML = rightHtml;
 
-    // ── 5. Final e 3º Lugar ───────────────────────────────────────────────────
+    // ── 4. Final e 3º Lugar ───────────────────────────────────────────────────
     const finalEl = document.querySelector('#bracket-final .match-slot');
     const thirdEl = document.querySelector('#bracket-bronze .match-slot');
     if (finalEl) {
