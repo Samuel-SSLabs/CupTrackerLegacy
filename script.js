@@ -9,6 +9,8 @@ let cachePartidas = {};
 let fixtureAtualNoModal = null;
 let primeiraCargaMain = true;
 let cacheDetalhesMemoria = {};
+let mapaTimeParaGrupo = {};
+let grupoAtualNoPainel = null;
 const somGol = new Audio('assets/audio.mp3');
 const SIGLAS_FIFA = {
     "Canada": "CAN", "United States": "USA", "Mexico": "MEX",
@@ -128,7 +130,9 @@ function renderizarDetalhes(fixtureId, dados) {
         } else if (statusShort === 'HT') {
             statusTexto = 'Intervalo';
         } else if (STATUS_FIM.includes(statusShort)) {
-            statusTexto = isPenaltyFim ? 'Encerrado — Pênaltis' : 'Encerrado';
+            statusTexto = isPenaltyFim
+                ? 'Encerrado — Pênaltis'
+                : (statusShort === 'AET' ? 'Encerrado — Prorrogação' : 'Encerrado');
         }
         const modalPenHtml = temPen && (isPenaltyShootout || isPenaltyFim)
             ? `<span class="modal-pen-score">${penHome} x ${penAway} <span class="score-pen-label">nos pênaltis</span></span>`
@@ -284,6 +288,7 @@ function criarBlocoPartida(match, isLive, quemMarcou) {
     const isFinished = STATUS_FIM.includes(statusShort);
     const isPenaltyShootout = statusShort === 'P';
     const isPenaltyFim = statusShort === 'PEN';
+    const isProrrogacaoFim = statusShort === 'AET';
     const podeClicar = temDetalhes(statusShort);
     const penHome = match.score?.penalty?.home;
     const penAway = match.score?.penalty?.away;
@@ -303,7 +308,9 @@ function criarBlocoPartida(match, isLive, quemMarcou) {
         infoMinuto = 'Intervalo';
         infoCentral = ' ';
     } else if (isFinished) {
-        infoCentral = isPenaltyFim ? `${dia}/${mes} - Pên.` : `${dia}/${mes} - Fim`;
+        infoCentral = isPenaltyFim
+            ? `${dia}/${mes} - Pên.`
+            : (isProrrogacaoFim ? `${dia}/${mes} - Prór.` : `${dia}/${mes} - Fim`);
     } else {
         infoCentral = `${dia}/${mes} ${horaMinuto}`;
     }
@@ -369,9 +376,12 @@ function atualizarPainel() {
         });
         proximos.sort((a, b) => new Date(a.fixture.date) - new Date(b.fixture.date));
         encerrados.sort((a, b) => new Date(b.fixture.date) - new Date(a.fixture.date));
-        const fila = [...aoVivo, ...proximos.slice(0, 5)];
+        // Torneio encerrado: o painel principal mostra todas as partidas já
+        // finalizadas, da mais recente para a mais antiga, ocupando o espaço
+        // que antes era usado para "próximos jogos".
+        const fila = [...aoVivo, ...encerrados];
         if (fila.length === 0) {
-            mainQueue.innerHTML = '<div class="sem-jogos">Nenhum jogo<br>nos próximos dias.</div>';
+            mainQueue.innerHTML = '<div class="sem-jogos">Nenhum jogo<br>encontrado.</div>';
         } else {
             mainQueue.innerHTML = fila.map(m => criarBlocoPartida(m, STATUS_LIVE.includes(m.fixture.status.short), null)).join('');
         }
@@ -410,6 +420,10 @@ document.getElementById('btn-toggle-torneio').addEventListener('click', async fu
             .sort((a, b) => new Date(b.fixture.date) - new Date(a.fixture.date));
         if (historyContent && encerrados.length > 0) {
             historyContent.innerHTML = criarBlocoPartida(encerrados[0]);
+        }
+        if (grupoAtualNoPainel) {
+            grupoAtualNoPainel = null;
+            atualizarPainel();
         }
         return;
     }
@@ -616,8 +630,10 @@ function renderizarGrupos(todasEntradas, top8TerceiroIds) {
     const gruposValidos = todasEntradas.filter(grupo =>
         /^Group\s+[A-L]$/i.test(grupo[0]?.group ?? '')
     );
+    mapaTimeParaGrupo = {};
     scroller.innerHTML = gruposValidos.map((grupo, i) => {
         const nomeGrupo = grupo[0].group.replace(/Group/i, 'Grupo');
+        grupo.forEach(time => { mapaTimeParaGrupo[time.team.id] = nomeGrupo; });
         const linhasTime = grupo.map((time, idx) => {
             const top2 = idx < 2;
             const top4Terceiro = idx === 2 && (top8TerceiroIds?.has(time.team.id) ?? false);
@@ -636,12 +652,51 @@ function renderizarGrupos(todasEntradas, top8TerceiroIds) {
                     <span class="grupo-pts">${time.points}</span>
                 </div>`;
         }).join('');
+        const ativo = grupoAtualNoPainel === nomeGrupo;
         return `
-            <div class="grupo-card">
+            <div class="grupo-card${ativo ? ' grupo-card-ativo' : ''}" data-grupo="${nomeGrupo}" onclick="alternarFiltroGrupo('${nomeGrupo}')">
                 <div class="grupo-card-titulo">${nomeGrupo}</div>
                 ${linhasTime}
             </div>`;
     }).join('');
+}
+
+// ---------------------------------------------------------------------------
+// Filtro: ao clicar num grupo abaixo do chaveamento, mostra o histórico de
+// partidas daquele grupo no painel principal de partidas (game-list).
+// ---------------------------------------------------------------------------
+function alternarFiltroGrupo(nomeGrupo) {
+    if (grupoAtualNoPainel === nomeGrupo) {
+        limparFiltroGrupo();
+    } else {
+        renderizarHistoricoGrupo(nomeGrupo);
+    }
+}
+
+function renderizarHistoricoGrupo(nomeGrupo) {
+    grupoAtualNoPainel = nomeGrupo;
+    const mainQueue = document.getElementById('main-queue');
+    const jogos = Object.values(cachePartidas)
+        .filter(m => (m.league?.round ?? '').toLowerCase().includes('group') && mapaTimeParaGrupo[m.teams.home.id] === nomeGrupo)
+        .sort((a, b) => new Date(b.fixture.date) - new Date(a.fixture.date));
+    const cabecalho = `
+        <div class="grupo-painel-header">
+            <span class="grupo-painel-titulo">${nomeGrupo}</span>
+            <button class="grupo-painel-fechar" onclick="limparFiltroGrupo()">Ver todas ✕</button>
+        </div>`;
+    const corpo = jogos.length
+        ? jogos.map(m => criarBlocoPartida(m)).join('')
+        : '<div class="sem-jogos">Sem jogos<br>para este grupo.</div>';
+    mainQueue.innerHTML = cabecalho + corpo;
+    document.querySelectorAll('.grupo-card').forEach(c => {
+        c.classList.toggle('grupo-card-ativo', c.dataset.grupo === nomeGrupo);
+    });
+}
+
+function limparFiltroGrupo() {
+    grupoAtualNoPainel = null;
+    document.querySelectorAll('.grupo-card').forEach(c => c.classList.remove('grupo-card-ativo'));
+    atualizarPainel();
 }
 
 // ===================== MODO TESTE (uso apenas via console do navegador) =====================
