@@ -572,7 +572,42 @@ body.modo-torneio-ativo .tft-screen {
     flex-shrink: 0;
     background: linear-gradient(160deg, #0f1113, #080a0b);
     transition: border-color 0.2s;
+    cursor: pointer;
 }
+.grupo-card:hover { border-color: rgba(255,171,77,0.5); }
+.grupo-card:active { background: #14171b; }
+.grupo-card-ativo {
+    border-color: var(--amber);
+    box-shadow: 0 0 12px -3px rgba(255,171,77,0.5);
+}
+.grupo-card-ativo .grupo-card-titulo { color: var(--amber); }
+.grupo-painel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 4px 12px;
+    border-bottom: 1px solid var(--card-border);
+    margin-bottom: 10px;
+}
+.grupo-painel-titulo {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--amber);
+    letter-spacing: 0.5px;
+}
+.grupo-painel-fechar {
+    background: rgba(255,171,77,0.12);
+    border: 1px solid rgba(255,171,77,0.4);
+    color: var(--amber);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.grupo-painel-fechar:hover { background: rgba(255,171,77,0.22); }
 .grupo-card-titulo {
     font-size: 11px;
     font-weight: 700;
