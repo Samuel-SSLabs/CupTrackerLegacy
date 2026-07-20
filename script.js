@@ -56,8 +56,6 @@ function temDetalhes(statusShort) {
     return STATUS_COM_DETALHES.includes(statusShort);
 }
 
-// Traduz o texto de "round" vindo da API (ex: "Group Stage - 2", "Round of 16",
-// "Quarter-finals"...) para um rótulo curto em português, mostrado no bloco da partida.
 function labelDaFase(roundStr) {
     const r = (roundStr || '').toLowerCase();
     if (!r) return '';
@@ -74,10 +72,6 @@ function labelDaFase(roundStr) {
     return '';
 }
 
-// ---------------------------------------------------------------------------
-// Acesso aos dados estáticos (gerados por gerar-dados.js e carregados via
-// dados.js antes deste arquivo). Nada aqui depende mais de rede.
-// ---------------------------------------------------------------------------
 function dadosEstaticos() {
     return window.DADOS_COPA || null;
 }
@@ -369,10 +363,6 @@ function criarBlocoPartida(match, isLive, quemMarcou) {
         </div>`;
 }
 
-// ---------------------------------------------------------------------------
-// Painel principal — agora lê direto de window.DADOS_COPA.partidas,
-// sem fetch e sem reagendamento (os dados nunca mudam).
-// ---------------------------------------------------------------------------
 function atualizarPainel() {
     const debugLog = document.getElementById('debug-log');
     const mainQueue = document.getElementById('main-queue');
@@ -399,9 +389,6 @@ function atualizarPainel() {
         });
         proximos.sort((a, b) => new Date(a.fixture.date) - new Date(b.fixture.date));
         encerrados.sort((a, b) => new Date(b.fixture.date) - new Date(a.fixture.date));
-        // Torneio encerrado: o painel principal mostra todas as partidas já
-        // finalizadas, da mais recente para a mais antiga, ocupando o espaço
-        // que antes era usado para "próximos jogos".
         const fila = [...aoVivo, ...encerrados];
         if (fila.length === 0) {
             mainQueue.innerHTML = '<div class="sem-jogos">Nenhum jogo<br>encontrado.</div>';
@@ -684,10 +671,6 @@ function renderizarGrupos(todasEntradas, top8TerceiroIds) {
     }).join('');
 }
 
-// ---------------------------------------------------------------------------
-// Filtro: ao clicar num grupo abaixo do chaveamento, mostra o histórico de
-// partidas daquele grupo no painel principal de partidas (game-list).
-// ---------------------------------------------------------------------------
 function alternarFiltroGrupo(nomeGrupo) {
     if (grupoAtualNoPainel === nomeGrupo) {
         limparFiltroGrupo();
