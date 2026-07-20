@@ -56,6 +56,24 @@ function temDetalhes(statusShort) {
     return STATUS_COM_DETALHES.includes(statusShort);
 }
 
+// Traduz o texto de "round" vindo da API (ex: "Group Stage - 2", "Round of 16",
+// "Quarter-finals"...) para um rótulo curto em português, mostrado no bloco da partida.
+function labelDaFase(roundStr) {
+    const r = (roundStr || '').toLowerCase();
+    if (!r) return '';
+    if (r.includes('group')) {
+        const numero = r.match(/(\d+)/);
+        return numero ? `Fase de Grupos • Rodada ${numero[1]}` : 'Fase de Grupos';
+    }
+    if (r.includes('32')) return 'Oitavas de 32';
+    if (r.includes('16') || r.includes('1/8') || r.includes('oitavas') || r.includes('octavos')) return 'Oitavas de Final';
+    if (r.includes('quarter') || r.includes('quartas') || r.includes('1/4')) return 'Quartas de Final';
+    if (r.includes('semi') || r.includes('1/2')) return 'Semifinal';
+    if (r.includes('3rd') || r.includes('terceiro') || r.includes('third') || r.includes('bronze')) return 'Disputa de 3º Lugar';
+    if (r.includes('final')) return 'Final';
+    return '';
+}
+
 // ---------------------------------------------------------------------------
 // Acesso aos dados estáticos (gerados por gerar-dados.js e carregados via
 // dados.js antes deste arquivo). Nada aqui depende mais de rede.
@@ -323,25 +341,30 @@ function criarBlocoPartida(match, isLive, quemMarcou) {
         quemMarcou ? 'gol-ativo' : '',
         podeClicar ? 'clicavel' : ''
     ].filter(Boolean).join(' ');
+    const faseTexto = labelDaFase(match.league?.round);
+    const faseHtml = faseTexto ? `<div class="match-fase">${faseTexto}</div>` : '';
     return `
         <div class="match-block ${classesExtra}" ${onclickAttr}>
-            <div class="team-side">
-                <img src="${logoA}" class="team-logo" alt="${siglaA}">
-                <span class="tla">${siglaA}</span>
-            </div>
-            <div class="center-info">
-                <span class="match-minute">${infoMinuto}</span>
-                <div class="score-row">
-                    <span class="score-num ${quemMarcou === 'home' ? 'gol-marcado' : ''}" style="color:${corGolA};">${golA}</span>
-                    <span class="score-sep">x</span>
-                    <span class="score-num ${quemMarcou === 'away' ? 'gol-marcado' : ''}" style="color:${corGolB};">${golB}</span>
+            ${faseHtml}
+            <div class="match-row">
+                <div class="team-side">
+                    <img src="${logoA}" class="team-logo" alt="${siglaA}">
+                    <span class="tla">${siglaA}</span>
                 </div>
-                ${penHtml}
-                <span class="status-time">${infoCentral}</span>
-            </div>
-            <div class="team-side right">
-                <span class="tla">${siglaB}</span>
-                <img src="${logoB}" class="team-logo" alt="${siglaB}">
+                <div class="center-info">
+                    <span class="match-minute">${infoMinuto}</span>
+                    <div class="score-row">
+                        <span class="score-num ${quemMarcou === 'home' ? 'gol-marcado' : ''}" style="color:${corGolA};">${golA}</span>
+                        <span class="score-sep">x</span>
+                        <span class="score-num ${quemMarcou === 'away' ? 'gol-marcado' : ''}" style="color:${corGolB};">${golB}</span>
+                    </div>
+                    ${penHtml}
+                    <span class="status-time">${infoCentral}</span>
+                </div>
+                <div class="team-side right">
+                    <span class="tla">${siglaB}</span>
+                    <img src="${logoB}" class="team-logo" alt="${siglaB}">
+                </div>
             </div>
         </div>`;
 }
