@@ -1,7 +1,7 @@
-// Snapshot estático do Painel Copa 2026 — gerado em 2026-07-19T00:18:25.641Z
+// Snapshot estático do Painel Copa 2026 — gerado em 2026-07-20T23:37:30.859Z
 // Não editar manualmente. Gerado por gerar-dados.js
 window.DADOS_COPA = {
-  "geradoEm": "2026-07-19T00:18:25.641Z",
+  "geradoEm": "2026-07-20T23:37:30.859Z",
   "partidas": {
     "deCache": true,
     "get": "fixtures",
@@ -7229,7 +7229,7 @@ window.DADOS_COPA = {
       {
         "fixture": {
           "id": 1591866,
-          "referee": null,
+          "referee": "Slavko Vinčić, Slovenia",
           "timezone": "UTC",
           "date": "2026-07-19T19:00:00+00:00",
           "timestamp": 1784487600,
@@ -7239,13 +7239,13 @@ window.DADOS_COPA = {
           },
           "venue": {
             "id": 0,
-            "name": null,
-            "city": null
+            "name": "MetLife Stadium",
+            "city": "East Rutherford"
           },
           "status": {
-            "long": "Not Started",
-            "short": "NS",
-            "elapsed": null,
+            "long": "Match Finished",
+            "short": "AET",
+            "elapsed": 120,
             "extra": null
           }
         },
@@ -7264,31 +7264,31 @@ window.DADOS_COPA = {
             "id": 9,
             "name": "Spain",
             "logo": "https://media.api-sports.io/football/teams/9.png",
-            "winner": null
+            "winner": true
           },
           "away": {
             "id": 26,
             "name": "Argentina",
             "logo": "https://media.api-sports.io/football/teams/26.png",
-            "winner": null
+            "winner": false
           }
         },
         "goals": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "score": {
           "halftime": {
-            "home": null,
-            "away": null
+            "home": 0,
+            "away": 0
           },
           "fulltime": {
-            "home": null,
-            "away": null
+            "home": 0,
+            "away": 0
           },
           "extratime": {
-            "home": null,
-            "away": null
+            "home": 1,
+            "away": 0
           },
           "penalty": {
             "home": null,
@@ -16955,6 +16955,460 @@ window.DADOS_COPA = {
           },
           "type": "Goal",
           "detail": "Normal Goal",
+          "comments": null
+        }
+      ]
+    },
+    "1489388": {
+      "statistics": [
+        {
+          "team": {
+            "id": 16,
+            "name": "Mexico",
+            "logo": "https://media.api-sports.io/football/teams/16.png"
+          },
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 4
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 3
+            },
+            {
+              "type": "Total Shots",
+              "value": 8
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 1
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 5
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 3
+            },
+            {
+              "type": "Fouls",
+              "value": 9
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 0
+            },
+            {
+              "type": "Offsides",
+              "value": 3
+            },
+            {
+              "type": "Ball Possession",
+              "value": "42%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": 0
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 2
+            },
+            {
+              "type": "Total passes",
+              "value": 427
+            },
+            {
+              "type": "Passes accurate",
+              "value": 349
+            },
+            {
+              "type": "Passes %",
+              "value": "82%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "0.53"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "-0.10"
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": 17,
+            "name": "South Korea",
+            "logo": "https://media.api-sports.io/football/teams/17.png"
+          },
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 2
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 4
+            },
+            {
+              "type": "Total Shots",
+              "value": 9
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 3
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 6
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 3
+            },
+            {
+              "type": "Fouls",
+              "value": 7
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 2
+            },
+            {
+              "type": "Offsides",
+              "value": 6
+            },
+            {
+              "type": "Ball Possession",
+              "value": "58%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": 2
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 3
+            },
+            {
+              "type": "Total passes",
+              "value": 578
+            },
+            {
+              "type": "Passes accurate",
+              "value": 488
+            },
+            {
+              "type": "Passes %",
+              "value": "84%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "0.91"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "-0.10"
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "time": {
+            "elapsed": 4,
+            "extra": null
+          },
+          "team": {
+            "id": 17,
+            "name": "South Korea",
+            "logo": "https://media.api-sports.io/football/teams/17.png"
+          },
+          "player": {
+            "id": 927,
+            "name": "Kang-in Lee"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Card",
+          "detail": "Yellow Card",
+          "comments": "Foul"
+        },
+        {
+          "time": {
+            "elapsed": 50,
+            "extra": null
+          },
+          "team": {
+            "id": 16,
+            "name": "Mexico",
+            "logo": "https://media.api-sports.io/football/teams/16.png"
+          },
+          "player": {
+            "id": 35970,
+            "name": "L. Romo"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 57,
+            "extra": null
+          },
+          "team": {
+            "id": 17,
+            "name": "South Korea",
+            "logo": "https://media.api-sports.io/football/teams/17.png"
+          },
+          "player": {
+            "id": 2906,
+            "name": "Lee Jae-Sung"
+          },
+          "assist": {
+            "id": 24888,
+            "name": "Hwang Hee-Chan"
+          },
+          "type": "subst",
+          "detail": "Substitution 1",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 57,
+            "extra": null
+          },
+          "team": {
+            "id": 17,
+            "name": "South Korea",
+            "logo": "https://media.api-sports.io/football/teams/17.png"
+          },
+          "player": {
+            "id": 186,
+            "name": "Son Heung-Min"
+          },
+          "assist": {
+            "id": 34710,
+            "name": "Oh Hyeon-Gyu"
+          },
+          "type": "subst",
+          "detail": "Substitution 2",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 58,
+            "extra": null
+          },
+          "team": {
+            "id": 17,
+            "name": "South Korea",
+            "logo": "https://media.api-sports.io/football/teams/17.png"
+          },
+          "player": {
+            "id": 2909,
+            "name": "Seung Ho Paik"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Card",
+          "detail": "Yellow Card",
+          "comments": "Foul"
+        },
+        {
+          "time": {
+            "elapsed": 71,
+            "extra": null
+          },
+          "team": {
+            "id": 16,
+            "name": "Mexico",
+            "logo": "https://media.api-sports.io/football/teams/16.png"
+          },
+          "player": {
+            "id": 35970,
+            "name": "L. Romo"
+          },
+          "assist": {
+            "id": 313383,
+            "name": "O. Vargas"
+          },
+          "type": "subst",
+          "detail": "Substitution 1",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 71,
+            "extra": null
+          },
+          "team": {
+            "id": 16,
+            "name": "Mexico",
+            "logo": "https://media.api-sports.io/football/teams/16.png"
+          },
+          "player": {
+            "id": 212233,
+            "name": "B. Gutierrez"
+          },
+          "assist": {
+            "id": 35576,
+            "name": "O. Pineda"
+          },
+          "type": "subst",
+          "detail": "Substitution 2",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 71,
+            "extra": null
+          },
+          "team": {
+            "id": 17,
+            "name": "South Korea",
+            "logo": "https://media.api-sports.io/football/teams/17.png"
+          },
+          "player": {
+            "id": 2912,
+            "name": "Kim Moon-Hwan"
+          },
+          "assist": {
+            "id": 237050,
+            "name": "Eom Ji-Sung"
+          },
+          "type": "subst",
+          "detail": "Substitution 3",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 71,
+            "extra": null
+          },
+          "team": {
+            "id": 17,
+            "name": "South Korea",
+            "logo": "https://media.api-sports.io/football/teams/17.png"
+          },
+          "player": {
+            "id": 197985,
+            "name": "Seol Young-Woo"
+          },
+          "assist": {
+            "id": 304958,
+            "name": "Yang Hyun-Jun"
+          },
+          "type": "subst",
+          "detail": "Substitution 4",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 77,
+            "extra": null
+          },
+          "team": {
+            "id": 17,
+            "name": "South Korea",
+            "logo": "https://media.api-sports.io/football/teams/17.png"
+          },
+          "player": {
+            "id": 2909,
+            "name": "Paik Seung-Ho"
+          },
+          "assist": {
+            "id": 34211,
+            "name": "Cho Gue-Sung"
+          },
+          "type": "subst",
+          "detail": "Substitution 5",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 80,
+            "extra": null
+          },
+          "team": {
+            "id": 16,
+            "name": "Mexico",
+            "logo": "https://media.api-sports.io/football/teams/16.png"
+          },
+          "player": {
+            "id": 2879,
+            "name": "R. Alvarado"
+          },
+          "assist": {
+            "id": 127227,
+            "name": "I. Reyes"
+          },
+          "type": "subst",
+          "detail": "Substitution 3",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 80,
+            "extra": null
+          },
+          "team": {
+            "id": 16,
+            "name": "Mexico",
+            "logo": "https://media.api-sports.io/football/teams/16.png"
+          },
+          "player": {
+            "id": 2887,
+            "name": "R. Jimenez"
+          },
+          "assist": {
+            "id": 94562,
+            "name": "S. Gimenez"
+          },
+          "type": "subst",
+          "detail": "Substitution 4",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 84,
+            "extra": null
+          },
+          "team": {
+            "id": 16,
+            "name": "Mexico",
+            "logo": "https://media.api-sports.io/football/teams/16.png"
+          },
+          "player": {
+            "id": 35532,
+            "name": "J. Quinones"
+          },
+          "assist": {
+            "id": 36111,
+            "name": "C. S. Huerta Valera"
+          },
+          "type": "subst",
+          "detail": "Substitution 5",
           "comments": null
         }
       ]
@@ -41933,6 +42387,526 @@ window.DADOS_COPA = {
         }
       ]
     },
+    "1539016": {
+      "statistics": [
+        {
+          "team": {
+            "id": 1567,
+            "name": "Iraq",
+            "logo": "https://media.api-sports.io/football/teams/1567.png"
+          },
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 1
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 8
+            },
+            {
+              "type": "Total Shots",
+              "value": 11
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 2
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 8
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 3
+            },
+            {
+              "type": "Fouls",
+              "value": 12
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 2
+            },
+            {
+              "type": "Offsides",
+              "value": 1
+            },
+            {
+              "type": "Ball Possession",
+              "value": "39%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": 1
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 2
+            },
+            {
+              "type": "Total passes",
+              "value": 334
+            },
+            {
+              "type": "Passes accurate",
+              "value": 271
+            },
+            {
+              "type": "Passes %",
+              "value": "81%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "0.80"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "-0.40"
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": 1090,
+            "name": "Norway",
+            "logo": "https://media.api-sports.io/football/teams/1090.png"
+          },
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 5
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 4
+            },
+            {
+              "type": "Total Shots",
+              "value": 12
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 3
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 11
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 1
+            },
+            {
+              "type": "Fouls",
+              "value": 13
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 5
+            },
+            {
+              "type": "Offsides",
+              "value": 0
+            },
+            {
+              "type": "Ball Possession",
+              "value": "61%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": 0
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 0
+            },
+            {
+              "type": "Total passes",
+              "value": 537
+            },
+            {
+              "type": "Passes accurate",
+              "value": 477
+            },
+            {
+              "type": "Passes %",
+              "value": "89%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "2.52"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "-0.40"
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "time": {
+            "elapsed": 29,
+            "extra": null
+          },
+          "team": {
+            "id": 1090,
+            "name": "Norway",
+            "logo": "https://media.api-sports.io/football/teams/1090.png"
+          },
+          "player": {
+            "id": 1100,
+            "name": "E. Haaland"
+          },
+          "assist": {
+            "id": 265782,
+            "name": "D. Wolfe"
+          },
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 39,
+            "extra": null
+          },
+          "team": {
+            "id": 1567,
+            "name": "Iraq",
+            "logo": "https://media.api-sports.io/football/teams/1567.png"
+          },
+          "player": {
+            "id": 49451,
+            "name": "A. Hussein"
+          },
+          "assist": {
+            "id": 47792,
+            "name": "A. Al Ammari"
+          },
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 43,
+            "extra": null
+          },
+          "team": {
+            "id": 1090,
+            "name": "Norway",
+            "logo": "https://media.api-sports.io/football/teams/1090.png"
+          },
+          "player": {
+            "id": 1100,
+            "name": "E. Haaland"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 59,
+            "extra": null
+          },
+          "team": {
+            "id": 1567,
+            "name": "Iraq",
+            "logo": "https://media.api-sports.io/football/teams/1567.png"
+          },
+          "player": {
+            "id": 626479,
+            "name": "Z. Ismaeel"
+          },
+          "assist": {
+            "id": 284295,
+            "name": "Z. Iqbal"
+          },
+          "type": "subst",
+          "detail": "Substitution 1",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 59,
+            "extra": null
+          },
+          "team": {
+            "id": 1567,
+            "name": "Iraq",
+            "logo": "https://media.api-sports.io/football/teams/1567.png"
+          },
+          "player": {
+            "id": 299813,
+            "name": "A. Al Hamadi"
+          },
+          "assist": {
+            "id": 265448,
+            "name": "M. Farji"
+          },
+          "type": "subst",
+          "detail": "Substitution 2",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 73,
+            "extra": null
+          },
+          "team": {
+            "id": 1567,
+            "name": "Iraq",
+            "logo": "https://media.api-sports.io/football/teams/1567.png"
+          },
+          "player": {
+            "id": 542644,
+            "name": "A. Jasim"
+          },
+          "assist": {
+            "id": 229112,
+            "name": "A. Qasem"
+          },
+          "type": "subst",
+          "detail": "Substitution 3",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 73,
+            "extra": null
+          },
+          "team": {
+            "id": 1567,
+            "name": "Iraq",
+            "logo": "https://media.api-sports.io/football/teams/1567.png"
+          },
+          "player": {
+            "id": 145465,
+            "name": "H. Ali"
+          },
+          "assist": {
+            "id": 427187,
+            "name": "M. Saadoon"
+          },
+          "type": "subst",
+          "detail": "Substitution 4",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 73,
+            "extra": null
+          },
+          "team": {
+            "id": 1090,
+            "name": "Norway",
+            "logo": "https://media.api-sports.io/football/teams/1090.png"
+          },
+          "player": {
+            "id": 8492,
+            "name": "A. Sorloth"
+          },
+          "assist": {
+            "id": 278133,
+            "name": "O. Bobb"
+          },
+          "type": "subst",
+          "detail": "Substitution 1",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 73,
+            "extra": null
+          },
+          "team": {
+            "id": 1090,
+            "name": "Norway",
+            "logo": "https://media.api-sports.io/football/teams/1090.png"
+          },
+          "player": {
+            "id": 265782,
+            "name": "D. Wolfe"
+          },
+          "assist": {
+            "id": 18967,
+            "name": "L. Ostigard"
+          },
+          "type": "subst",
+          "detail": "Substitution 2",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 73,
+            "extra": null
+          },
+          "team": {
+            "id": 1090,
+            "name": "Norway",
+            "logo": "https://media.api-sports.io/football/teams/1090.png"
+          },
+          "player": {
+            "id": 39043,
+            "name": "F. Aursnes"
+          },
+          "assist": {
+            "id": 39143,
+            "name": "K. Thorstvedt"
+          },
+          "type": "subst",
+          "detail": "Substitution 3",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 73,
+            "extra": null
+          },
+          "team": {
+            "id": 1090,
+            "name": "Norway",
+            "logo": "https://media.api-sports.io/football/teams/1090.png"
+          },
+          "player": {
+            "id": 314511,
+            "name": "A. Nusa"
+          },
+          "assist": {
+            "id": 301528,
+            "name": "A. Schjelderup"
+          },
+          "type": "subst",
+          "detail": "Substitution 4",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 76,
+            "extra": null
+          },
+          "team": {
+            "id": 1090,
+            "name": "Norway",
+            "logo": "https://media.api-sports.io/football/teams/1090.png"
+          },
+          "player": {
+            "id": 18967,
+            "name": "L. Ostigard"
+          },
+          "assist": {
+            "id": 37127,
+            "name": "M. Odegaard"
+          },
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 78,
+            "extra": null
+          },
+          "team": {
+            "id": 1567,
+            "name": "Iraq",
+            "logo": "https://media.api-sports.io/football/teams/1567.png"
+          },
+          "player": {
+            "id": 140747,
+            "name": "I. Bayesh"
+          },
+          "assist": {
+            "id": 53894,
+            "name": "M. Ali"
+          },
+          "type": "subst",
+          "detail": "Substitution 5",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 81,
+            "extra": null
+          },
+          "team": {
+            "id": 1090,
+            "name": "Norway",
+            "logo": "https://media.api-sports.io/football/teams/1090.png"
+          },
+          "player": {
+            "id": 37127,
+            "name": "M. Odegaard"
+          },
+          "assist": {
+            "id": 39064,
+            "name": "P. Berg"
+          },
+          "type": "subst",
+          "detail": "Substitution 5",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 86,
+            "extra": null
+          },
+          "team": {
+            "id": 1567,
+            "name": "Iraq",
+            "logo": "https://media.api-sports.io/football/teams/1567.png"
+          },
+          "player": {
+            "id": 296373,
+            "name": "Zaid Tahseen"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Card",
+          "detail": "Yellow Card",
+          "comments": "Foul"
+        },
+        {
+          "time": {
+            "elapsed": 90,
+            "extra": null
+          },
+          "team": {
+            "id": 1090,
+            "name": "Norway",
+            "logo": "https://media.api-sports.io/football/teams/1090.png"
+          },
+          "player": {
+            "id": 49451,
+            "name": "A. Hussein"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Goal",
+          "detail": "Own Goal",
+          "comments": null
+        }
+      ]
+    },
     "1539017": {
       "statistics": [
         {
@@ -58922,11 +59896,11 @@ window.DADOS_COPA = {
             },
             {
               "type": "Total passes",
-              "value": 442
+              "value": 445
             },
             {
               "type": "Passes accurate",
-              "value": 402
+              "value": 405
             },
             {
               "type": "Passes %",
@@ -58938,7 +59912,7 @@ window.DADOS_COPA = {
             },
             {
               "type": "goals_prevented",
-              "value": "1.05"
+              "value": "0.05"
             }
           ]
         },
@@ -59019,7 +59993,7 @@ window.DADOS_COPA = {
             },
             {
               "type": "goals_prevented",
-              "value": "1.05"
+              "value": "0.05"
             }
           ]
         }
@@ -59094,7 +60068,7 @@ window.DADOS_COPA = {
         {
           "time": {
             "elapsed": 45,
-            "extra": 1
+            "extra": null
           },
           "team": {
             "id": 10,
@@ -59146,28 +60120,6 @@ window.DADOS_COPA = {
             "logo": "https://media.api-sports.io/football/teams/2.png"
           },
           "player": {
-            "id": 343027,
-            "name": "D. Doue"
-          },
-          "assist": {
-            "id": 161904,
-            "name": "B. Barcola"
-          },
-          "type": "subst",
-          "detail": "Substitution 2",
-          "comments": null
-        },
-        {
-          "time": {
-            "elapsed": 46,
-            "extra": null
-          },
-          "team": {
-            "id": 2,
-            "name": "France",
-            "logo": "https://media.api-sports.io/football/teams/2.png"
-          },
-          "player": {
             "id": 47300,
             "name": "T. Hernandez"
           },
@@ -59176,7 +60128,7 @@ window.DADOS_COPA = {
             "name": "L. Digne"
           },
           "type": "subst",
-          "detail": "Substitution 3",
+          "detail": "Substitution 2",
           "comments": null
         },
         {
@@ -59196,6 +60148,28 @@ window.DADOS_COPA = {
           "assist": {
             "id": 1149,
             "name": "D. Upamecano"
+          },
+          "type": "subst",
+          "detail": "Substitution 3",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 46,
+            "extra": null
+          },
+          "team": {
+            "id": 2,
+            "name": "France",
+            "logo": "https://media.api-sports.io/football/teams/2.png"
+          },
+          "player": {
+            "id": 343027,
+            "name": "D. Doue"
+          },
+          "assist": {
+            "id": 161904,
+            "name": "B. Barcola"
           },
           "type": "subst",
           "detail": "Substitution 4",
@@ -59300,12 +60274,12 @@ window.DADOS_COPA = {
             "logo": "https://media.api-sports.io/football/teams/10.png"
           },
           "player": {
-            "id": 19974,
-            "name": "I. Toney"
+            "id": 19586,
+            "name": "E. Eze"
           },
           "assist": {
-            "id": 138908,
-            "name": "E. Anderson"
+            "id": 129718,
+            "name": "J. Bellingham"
           },
           "type": "subst",
           "detail": "Substitution 2",
@@ -59322,12 +60296,12 @@ window.DADOS_COPA = {
             "logo": "https://media.api-sports.io/football/teams/10.png"
           },
           "player": {
-            "id": 19586,
-            "name": "E. Eze"
+            "id": 19974,
+            "name": "I. Toney"
           },
           "assist": {
-            "id": 129718,
-            "name": "J. Bellingham"
+            "id": 138908,
+            "name": "E. Anderson"
           },
           "type": "subst",
           "detail": "Substitution 3",
@@ -59424,7 +60398,7 @@ window.DADOS_COPA = {
         {
           "time": {
             "elapsed": 90,
-            "extra": 6
+            "extra": null
           },
           "team": {
             "id": 2,
@@ -59446,7 +60420,7 @@ window.DADOS_COPA = {
         {
           "time": {
             "elapsed": 90,
-            "extra": 8
+            "extra": null
           },
           "team": {
             "id": 10,
@@ -59464,6 +60438,614 @@ window.DADOS_COPA = {
           "type": "Goal",
           "detail": "Normal Goal",
           "comments": null
+        }
+      ]
+    },
+    "1591866": {
+      "statistics": [
+        {
+          "team": {
+            "id": 9,
+            "name": "Spain",
+            "logo": "https://media.api-sports.io/football/teams/9.png"
+          },
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 12
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 5
+            },
+            {
+              "type": "Total Shots",
+              "value": 20
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 3
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 9
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 11
+            },
+            {
+              "type": "Fouls",
+              "value": 21
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 9
+            },
+            {
+              "type": "Offsides",
+              "value": 4
+            },
+            {
+              "type": "Ball Possession",
+              "value": "65%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": 0
+            },
+            {
+              "type": "Red Cards",
+              "value": 0
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 0
+            },
+            {
+              "type": "Total passes",
+              "value": 852
+            },
+            {
+              "type": "Passes accurate",
+              "value": 762
+            },
+            {
+              "type": "Passes %",
+              "value": "89%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "1.94"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "1.81"
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 1
+            },
+            {
+              "type": "Total Shots",
+              "value": 2
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 1
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 1
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 1
+            },
+            {
+              "type": "Fouls",
+              "value": 25
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 4
+            },
+            {
+              "type": "Offsides",
+              "value": 1
+            },
+            {
+              "type": "Ball Possession",
+              "value": "35%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": 6
+            },
+            {
+              "type": "Red Cards",
+              "value": 1
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 11
+            },
+            {
+              "type": "Total passes",
+              "value": 463
+            },
+            {
+              "type": "Passes accurate",
+              "value": 357
+            },
+            {
+              "type": "Passes %",
+              "value": "77%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "0.22"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "1.81"
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "time": {
+            "elapsed": -5,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 30776,
+            "name": "Cristian Romero"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Card",
+          "detail": "Yellow Card",
+          "comments": "Argument"
+        },
+        {
+          "time": {
+            "elapsed": 41,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 2467,
+            "name": "Lisandro Martínez"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Card",
+          "detail": "Yellow Card",
+          "comments": "Foul"
+        },
+        {
+          "time": {
+            "elapsed": 44,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 2467,
+            "name": "Lisandro Martínez"
+          },
+          "assist": {
+            "id": 624,
+            "name": "Nicolás Otamendi"
+          },
+          "type": "subst",
+          "detail": "Substitution 1",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 46,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 26315,
+            "name": "Nicolás González"
+          },
+          "assist": {
+            "id": 271,
+            "name": "Leandro Paredes"
+          },
+          "type": "subst",
+          "detail": "Substitution 2",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 52,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 271,
+            "name": "Leandro Paredes"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Card",
+          "detail": "Yellow Card",
+          "comments": "Unsporting behaviour"
+        },
+        {
+          "time": {
+            "elapsed": 58,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 2468,
+            "name": "Gonzalo Montiel"
+          },
+          "assist": {
+            "id": 6503,
+            "name": "Nahuel Molina"
+          },
+          "type": "subst",
+          "detail": "Substitution 3",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 62,
+            "extra": null
+          },
+          "team": {
+            "id": 9,
+            "name": "Spain",
+            "logo": "https://media.api-sports.io/football/teams/9.png"
+          },
+          "player": {
+            "id": 328,
+            "name": "Fabián Ruiz"
+          },
+          "assist": {
+            "id": 133609,
+            "name": "Pedri"
+          },
+          "type": "subst",
+          "detail": "Substitution 1",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 62,
+            "extra": null
+          },
+          "team": {
+            "id": 9,
+            "name": "Spain",
+            "logo": "https://media.api-sports.io/football/teams/9.png"
+          },
+          "player": {
+            "id": 47323,
+            "name": "Mikel Oyarzabal"
+          },
+          "assist": {
+            "id": 931,
+            "name": "Ferran Torres"
+          },
+          "type": "subst",
+          "detail": "Substitution 2",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 70,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 30776,
+            "name": "Cristian Romero"
+          },
+          "assist": {
+            "id": 6231,
+            "name": "Facundo Medina"
+          },
+          "type": "subst",
+          "detail": "Substitution 4",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 70,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 2472,
+            "name": "Rodrigo De Paul"
+          },
+          "assist": {
+            "id": 323935,
+            "name": "Giuliano Simeone"
+          },
+          "type": "subst",
+          "detail": "Substitution 5",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 75,
+            "extra": null
+          },
+          "team": {
+            "id": 9,
+            "name": "Spain",
+            "logo": "https://media.api-sports.io/football/teams/9.png"
+          },
+          "player": {
+            "id": 182219,
+            "name": "Alex Baena"
+          },
+          "assist": {
+            "id": 183799,
+            "name": "Nico Williams"
+          },
+          "type": "subst",
+          "detail": "Substitution 3",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 75,
+            "extra": null
+          },
+          "team": {
+            "id": 9,
+            "name": "Spain",
+            "logo": "https://media.api-sports.io/football/teams/9.png"
+          },
+          "player": {
+            "id": 1323,
+            "name": "Dani Olmo"
+          },
+          "assist": {
+            "id": 47311,
+            "name": "Mikel Merino"
+          },
+          "type": "subst",
+          "detail": "Substitution 4",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 83,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 5996,
+            "name": "Enzo Fernández"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Card",
+          "detail": "Yellow Card",
+          "comments": "Argument"
+        },
+        {
+          "time": {
+            "elapsed": 90,
+            "extra": 3
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 5996,
+            "name": "Enzo Fernández"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Card",
+          "detail": "Yellow Card",
+          "comments": "Foul"
+        },
+        {
+          "time": {
+            "elapsed": 90,
+            "extra": 3
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 5996,
+            "name": "Enzo Fernández"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Card",
+          "detail": "Red Card",
+          "comments": "Foul"
+        },
+        {
+          "time": {
+            "elapsed": 99,
+            "extra": null
+          },
+          "team": {
+            "id": 9,
+            "name": "Spain",
+            "logo": "https://media.api-sports.io/football/teams/9.png"
+          },
+          "player": {
+            "id": 44,
+            "name": "Rodri"
+          },
+          "assist": {
+            "id": 47315,
+            "name": "Martín Zubimendi"
+          },
+          "type": "subst",
+          "detail": "Substitution 5",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 99,
+            "extra": null
+          },
+          "team": {
+            "id": 9,
+            "name": "Spain",
+            "logo": "https://media.api-sports.io/football/teams/9.png"
+          },
+          "player": {
+            "id": 622,
+            "name": "Aymeric Laporte"
+          },
+          "assist": {
+            "id": 619,
+            "name": "Eric García"
+          },
+          "type": "subst",
+          "detail": "Substitution 6",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 102,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 6009,
+            "name": "Julián Alvarez"
+          },
+          "assist": {
+            "id": 6610,
+            "name": "Marcos Senesi"
+          },
+          "type": "subst",
+          "detail": "Substitution 6",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 106,
+            "extra": null
+          },
+          "team": {
+            "id": 9,
+            "name": "Spain",
+            "logo": "https://media.api-sports.io/football/teams/9.png"
+          },
+          "player": {
+            "id": 931,
+            "name": "Ferran Torres"
+          },
+          "assist": {
+            "id": 183799,
+            "name": "Nico Williams"
+          },
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "comments": null
+        },
+        {
+          "time": {
+            "elapsed": 111,
+            "extra": null
+          },
+          "team": {
+            "id": 26,
+            "name": "Argentina",
+            "logo": "https://media.api-sports.io/football/teams/26.png"
+          },
+          "player": {
+            "id": 6716,
+            "name": "Alexis Mac Allister"
+          },
+          "assist": {
+            "id": null,
+            "name": null
+          },
+          "type": "Card",
+          "detail": "Yellow Card",
+          "comments": "Foul"
         }
       ]
     }
@@ -59534,7 +61116,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -59579,7 +61161,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -59624,7 +61206,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -59669,7 +61251,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -59716,7 +61298,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -59761,7 +61343,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -59806,7 +61388,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -59851,7 +61433,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -59898,7 +61480,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -59943,7 +61525,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -59988,7 +61570,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -60033,7 +61615,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -60080,7 +61662,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -60125,7 +61707,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -60170,7 +61752,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -60215,7 +61797,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -60262,7 +61844,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -60307,7 +61889,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -60352,7 +61934,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -60397,7 +61979,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -60444,7 +62026,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -60489,7 +62071,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -60534,7 +62116,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -60579,7 +62161,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -60626,7 +62208,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -60671,7 +62253,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -60716,7 +62298,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -60761,7 +62343,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -60808,7 +62390,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -60853,7 +62435,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -60898,7 +62480,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -60943,7 +62525,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -60957,7 +62539,7 @@ window.DADOS_COPA = {
                 "points": 9,
                 "goalsDiff": 8,
                 "group": "Group I",
-                "form": "LWWWW",
+                "form": "LLWWW",
                 "status": "same",
                 "description": "Round of 32",
                 "all": {
@@ -60990,7 +62572,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -61035,7 +62617,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -61080,7 +62662,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -61125,7 +62707,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -61139,7 +62721,7 @@ window.DADOS_COPA = {
                 "points": 9,
                 "goalsDiff": 7,
                 "group": "Group J",
-                "form": "WWWWW",
+                "form": "LWWWW",
                 "status": "same",
                 "description": "Round of 32",
                 "all": {
@@ -61172,7 +62754,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -61217,7 +62799,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -61262,7 +62844,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -61307,7 +62889,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -61354,7 +62936,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -61399,7 +62981,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -61444,7 +63026,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -61489,7 +63071,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -61503,7 +63085,7 @@ window.DADOS_COPA = {
                 "points": 7,
                 "goalsDiff": 4,
                 "group": "Group L",
-                "form": "LWWWW",
+                "form": "WLWWW",
                 "status": "same",
                 "description": "Round of 32",
                 "all": {
@@ -61536,7 +63118,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -61581,7 +63163,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -61626,7 +63208,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -61671,7 +63253,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ],
             [
@@ -61718,7 +63300,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 2,
@@ -61763,7 +63345,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 3,
@@ -61808,7 +63390,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 4,
@@ -61853,7 +63435,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 5,
@@ -61898,7 +63480,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 6,
@@ -61943,7 +63525,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 7,
@@ -61988,7 +63570,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 8,
@@ -62033,7 +63615,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 9,
@@ -62078,7 +63660,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 10,
@@ -62123,7 +63705,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 11,
@@ -62168,7 +63750,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               },
               {
                 "rank": 12,
@@ -62213,7 +63795,7 @@ window.DADOS_COPA = {
                     "against": 0
                   }
                 },
-                "update": "2026-07-18T00:00:00+00:00"
+                "update": "2026-07-20T00:00:00+00:00"
               }
             ]
           ]
@@ -62234,101 +63816,6 @@ window.DADOS_COPA = {
       "total": 1
     },
     "response": [
-      {
-        "player": {
-          "id": 154,
-          "name": "L. Messi",
-          "firstname": "Lionel Andrés",
-          "lastname": "Messi Cuccittini",
-          "age": 38,
-          "birth": {
-            "date": "1987-06-24",
-            "place": "Rosario",
-            "country": "Argentina"
-          },
-          "nationality": "Argentina",
-          "height": "170",
-          "weight": "67",
-          "injured": false,
-          "photo": "https://media.api-sports.io/football/players/154.png"
-        },
-        "statistics": [
-          {
-            "team": {
-              "id": 26,
-              "name": "Argentina",
-              "logo": "https://media.api-sports.io/football/teams/26.png"
-            },
-            "league": {
-              "id": 1,
-              "name": "World Cup",
-              "country": "World",
-              "logo": "https://media.api-sports.io/football/leagues/1.png",
-              "flag": null,
-              "season": 2026
-            },
-            "games": {
-              "appearences": 7,
-              "lineups": 6,
-              "minutes": 620,
-              "number": 10,
-              "position": "Attacker",
-              "rating": "9.07",
-              "captain": false
-            },
-            "substitutes": {
-              "in": 1,
-              "out": 1,
-              "bench": 1
-            },
-            "shots": {
-              "total": 28,
-              "on": 18
-            },
-            "goals": {
-              "total": 8,
-              "conceded": 0,
-              "assists": 4,
-              "saves": null
-            },
-            "passes": {
-              "total": 314,
-              "key": 26,
-              "accuracy": 81
-            },
-            "tackles": {
-              "total": 10,
-              "blocks": null,
-              "interceptions": 1
-            },
-            "duels": {
-              "total": 90,
-              "won": 51
-            },
-            "dribbles": {
-              "attempts": 35,
-              "success": 24,
-              "past": null
-            },
-            "fouls": {
-              "drawn": 16,
-              "committed": 2
-            },
-            "cards": {
-              "yellow": 0,
-              "yellowred": 0,
-              "red": 0
-            },
-            "penalty": {
-              "won": null,
-              "commited": null,
-              "scored": 0,
-              "missed": 2,
-              "saved": null
-            }
-          }
-        ]
-      },
       {
         "player": {
           "id": 278,
@@ -62363,12 +63850,12 @@ window.DADOS_COPA = {
               "season": 2026
             },
             "games": {
-              "appearences": 7,
-              "lineups": 7,
-              "minutes": 608,
+              "appearences": 8,
+              "lineups": 8,
+              "minutes": 698,
               "number": 10,
               "position": "Attacker",
-              "rating": "7.96",
+              "rating": "8.21",
               "captain": false
             },
             "substitutes": {
@@ -62377,18 +63864,18 @@ window.DADOS_COPA = {
               "bench": 0
             },
             "shots": {
-              "total": 30,
-              "on": 19
+              "total": 36,
+              "on": 23
             },
             "goals": {
-              "total": 8,
+              "total": 10,
               "conceded": 0,
-              "assists": 3,
+              "assists": 4,
               "saves": null
             },
             "passes": {
-              "total": 202,
-              "key": 16,
+              "total": 234,
+              "key": 18,
               "accuracy": 85
             },
             "tackles": {
@@ -62397,12 +63884,12 @@ window.DADOS_COPA = {
               "interceptions": null
             },
             "duels": {
-              "total": 55,
-              "won": 21
+              "total": 70,
+              "won": 23
             },
             "dribbles": {
-              "attempts": 29,
-              "success": 11,
+              "attempts": 36,
+              "success": 13,
               "past": null
             },
             "fouls": {
@@ -62419,6 +63906,196 @@ window.DADOS_COPA = {
               "commited": null,
               "scored": 1,
               "missed": 1,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 154,
+          "name": "L. Messi",
+          "firstname": "Lionel Andrés",
+          "lastname": "Messi Cuccittini",
+          "age": 38,
+          "birth": {
+            "date": "1987-06-24",
+            "place": "Rosario",
+            "country": "Argentina"
+          },
+          "nationality": "Argentina",
+          "height": "170",
+          "weight": "67",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/154.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 26,
+              "name": "Argentina",
+              "logo": "https://media.api-sports.io/football/teams/26.png"
+            },
+            "league": {
+              "id": 1,
+              "name": "World Cup",
+              "country": "World",
+              "logo": "https://media.api-sports.io/football/leagues/1.png",
+              "flag": null,
+              "season": 2026
+            },
+            "games": {
+              "appearences": 8,
+              "lineups": 7,
+              "minutes": 740,
+              "number": 10,
+              "position": "Attacker",
+              "rating": "8.85",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 1,
+              "out": 1,
+              "bench": 1
+            },
+            "shots": {
+              "total": 28,
+              "on": 18
+            },
+            "goals": {
+              "total": 8,
+              "conceded": 0,
+              "assists": 4,
+              "saves": null
+            },
+            "passes": {
+              "total": 348,
+              "key": 26,
+              "accuracy": 81
+            },
+            "tackles": {
+              "total": 11,
+              "blocks": null,
+              "interceptions": 1
+            },
+            "duels": {
+              "total": 102,
+              "won": 60
+            },
+            "dribbles": {
+              "attempts": 38,
+              "success": 27,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 20,
+              "committed": 3
+            },
+            "cards": {
+              "yellow": 0,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 2,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 129718,
+          "name": "J. Bellingham",
+          "firstname": "Jude Victor William",
+          "lastname": "Bellingham",
+          "age": 22,
+          "birth": {
+            "date": "2003-06-29",
+            "place": "Stourbridge",
+            "country": "England"
+          },
+          "nationality": "England",
+          "height": "186",
+          "weight": "75",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/129718.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 10,
+              "name": "England",
+              "logo": "https://media.api-sports.io/football/teams/10.png"
+            },
+            "league": {
+              "id": 1,
+              "name": "World Cup",
+              "country": "World",
+              "logo": "https://media.api-sports.io/football/leagues/1.png",
+              "flag": null,
+              "season": 2026
+            },
+            "games": {
+              "appearences": 8,
+              "lineups": 7,
+              "minutes": 629,
+              "number": 10,
+              "position": "Midfielder",
+              "rating": "7.8",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 1,
+              "out": 4,
+              "bench": 1
+            },
+            "shots": {
+              "total": 17,
+              "on": 13
+            },
+            "goals": {
+              "total": 7,
+              "conceded": 0,
+              "assists": 1,
+              "saves": null
+            },
+            "passes": {
+              "total": 231,
+              "key": 8,
+              "accuracy": 81
+            },
+            "tackles": {
+              "total": 14,
+              "blocks": null,
+              "interceptions": 3
+            },
+            "duels": {
+              "total": 92,
+              "won": 50
+            },
+            "dribbles": {
+              "attempts": 26,
+              "success": 18,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 17,
+              "committed": 9
+            },
+            "cards": {
+              "yellow": 1,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
               "saved": null
             }
           }
@@ -62521,28 +64198,28 @@ window.DADOS_COPA = {
       },
       {
         "player": {
-          "id": 129718,
-          "name": "J. Bellingham",
-          "firstname": "Jude Victor William",
-          "lastname": "Bellingham",
-          "age": 22,
+          "id": 153,
+          "name": "O. Dembélé",
+          "firstname": "Masour Ousmane",
+          "lastname": "Dembélé",
+          "age": 28,
           "birth": {
-            "date": "2003-06-29",
-            "place": "Stourbridge",
-            "country": "England"
+            "date": "1997-05-15",
+            "place": "Vernon",
+            "country": "France"
           },
-          "nationality": "England",
-          "height": "186",
-          "weight": "75",
+          "nationality": "France",
+          "height": "178",
+          "weight": "67",
           "injured": false,
-          "photo": "https://media.api-sports.io/football/players/129718.png"
+          "photo": "https://media.api-sports.io/football/players/153.png"
         },
         "statistics": [
           {
             "team": {
-              "id": 10,
-              "name": "England",
-              "logo": "https://media.api-sports.io/football/teams/10.png"
+              "id": 2,
+              "name": "France",
+              "logo": "https://media.api-sports.io/football/teams/2.png"
             },
             "league": {
               "id": 1,
@@ -62553,54 +64230,54 @@ window.DADOS_COPA = {
               "season": 2026
             },
             "games": {
-              "appearences": 7,
+              "appearences": 8,
               "lineups": 7,
-              "minutes": 618,
-              "number": 10,
+              "minutes": 597,
+              "number": 7,
               "position": "Midfielder",
-              "rating": "7.73",
+              "rating": "7.89",
               "captain": false
             },
             "substitutes": {
-              "in": 0,
-              "out": 4,
-              "bench": 0
+              "in": 1,
+              "out": 5,
+              "bench": 1
             },
             "shots": {
               "total": 15,
-              "on": 11
+              "on": 10
             },
             "goals": {
               "total": 6,
               "conceded": 0,
-              "assists": 1,
+              "assists": 2,
               "saves": null
             },
             "passes": {
-              "total": 223,
-              "key": 8,
-              "accuracy": 82
+              "total": 293,
+              "key": 18,
+              "accuracy": 79
             },
             "tackles": {
-              "total": 14,
+              "total": 3,
               "blocks": null,
-              "interceptions": 3
+              "interceptions": null
             },
             "duels": {
-              "total": 84,
-              "won": 44
+              "total": 33,
+              "won": 15
             },
             "dribbles": {
-              "attempts": 21,
-              "success": 13,
+              "attempts": 13,
+              "success": 6,
               "past": null
             },
             "fouls": {
-              "drawn": 16,
-              "committed": 9
+              "drawn": 4,
+              "committed": null
             },
             "cards": {
-              "yellow": 1,
+              "yellow": 0,
               "yellowred": 0,
               "red": 0
             },
@@ -62659,7 +64336,7 @@ window.DADOS_COPA = {
             "substitutes": {
               "in": 0,
               "out": 2,
-              "bench": 0
+              "bench": 1
             },
             "shots": {
               "total": 18,
@@ -62711,101 +64388,6 @@ window.DADOS_COPA = {
       },
       {
         "player": {
-          "id": 153,
-          "name": "O. Dembélé",
-          "firstname": "Masour Ousmane",
-          "lastname": "Dembélé",
-          "age": 28,
-          "birth": {
-            "date": "1997-05-15",
-            "place": "Vernon",
-            "country": "France"
-          },
-          "nationality": "France",
-          "height": "178",
-          "weight": "67",
-          "injured": false,
-          "photo": "https://media.api-sports.io/football/players/153.png"
-        },
-        "statistics": [
-          {
-            "team": {
-              "id": 2,
-              "name": "France",
-              "logo": "https://media.api-sports.io/football/teams/2.png"
-            },
-            "league": {
-              "id": 1,
-              "name": "World Cup",
-              "country": "World",
-              "logo": "https://media.api-sports.io/football/leagues/1.png",
-              "flag": null,
-              "season": 2026
-            },
-            "games": {
-              "appearences": 7,
-              "lineups": 7,
-              "minutes": 552,
-              "number": 7,
-              "position": "Midfielder",
-              "rating": "7.84",
-              "captain": false
-            },
-            "substitutes": {
-              "in": 0,
-              "out": 5,
-              "bench": 0
-            },
-            "shots": {
-              "total": 13,
-              "on": 8
-            },
-            "goals": {
-              "total": 5,
-              "conceded": 0,
-              "assists": 2,
-              "saves": null
-            },
-            "passes": {
-              "total": 265,
-              "key": 16,
-              "accuracy": 78
-            },
-            "tackles": {
-              "total": 3,
-              "blocks": null,
-              "interceptions": null
-            },
-            "duels": {
-              "total": 30,
-              "won": 13
-            },
-            "dribbles": {
-              "attempts": 12,
-              "success": 5,
-              "past": null
-            },
-            "fouls": {
-              "drawn": 3,
-              "committed": null
-            },
-            "cards": {
-              "yellow": 0,
-              "yellowred": 0,
-              "red": 0
-            },
-            "penalty": {
-              "won": null,
-              "commited": null,
-              "scored": 0,
-              "missed": 0,
-              "saved": null
-            }
-          }
-        ]
-      },
-      {
-        "player": {
           "id": 47323,
           "name": "Mikel Oyarzabal",
           "firstname": "Mikel",
@@ -62838,22 +64420,22 @@ window.DADOS_COPA = {
               "season": 2026
             },
             "games": {
-              "appearences": 7,
-              "lineups": 7,
-              "minutes": 543,
+              "appearences": 8,
+              "lineups": 8,
+              "minutes": 605,
               "number": 21,
               "position": "Attacker",
-              "rating": "7.27",
+              "rating": "7.19",
               "captain": false
             },
             "substitutes": {
               "in": 0,
-              "out": 5,
+              "out": 6,
               "bench": 0
             },
             "shots": {
-              "total": 20,
-              "on": 11
+              "total": 21,
+              "on": 12
             },
             "goals": {
               "total": 5,
@@ -62862,27 +64444,27 @@ window.DADOS_COPA = {
               "saves": null
             },
             "passes": {
-              "total": 140,
+              "total": 154,
               "key": 6,
               "accuracy": 82
             },
             "tackles": {
-              "total": 5,
+              "total": 6,
               "blocks": null,
               "interceptions": 1
             },
             "duels": {
-              "total": 38,
-              "won": 17
+              "total": 47,
+              "won": 20
             },
             "dribbles": {
-              "attempts": 3,
-              "success": 1,
+              "attempts": 4,
+              "success": 2,
               "past": null
             },
             "fouls": {
-              "drawn": 4,
-              "committed": 3
+              "drawn": 5,
+              "committed": 4
             },
             "cards": {
               "yellow": 0,
@@ -63361,6 +64943,101 @@ window.DADOS_COPA = {
             },
             "cards": {
               "yellow": 0,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 161904,
+          "name": "B. Barcola",
+          "firstname": "Bradley",
+          "lastname": "Barcola",
+          "age": 23,
+          "birth": {
+            "date": "2002-09-02",
+            "place": "Lyon",
+            "country": "France"
+          },
+          "nationality": "France",
+          "height": "182",
+          "weight": "73",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/161904.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 2,
+              "name": "France",
+              "logo": "https://media.api-sports.io/football/teams/2.png"
+            },
+            "league": {
+              "id": 1,
+              "name": "World Cup",
+              "country": "World",
+              "logo": "https://media.api-sports.io/football/leagues/1.png",
+              "flag": null,
+              "season": 2026
+            },
+            "games": {
+              "appearences": 8,
+              "lineups": 4,
+              "minutes": 384,
+              "number": 12,
+              "position": "Attacker",
+              "rating": "7.18",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 4,
+              "out": 3,
+              "bench": 4
+            },
+            "shots": {
+              "total": 9,
+              "on": 5
+            },
+            "goals": {
+              "total": 3,
+              "conceded": 0,
+              "assists": 1,
+              "saves": null
+            },
+            "passes": {
+              "total": 124,
+              "key": 8,
+              "accuracy": 87
+            },
+            "tackles": {
+              "total": 5,
+              "blocks": 1,
+              "interceptions": 1
+            },
+            "duels": {
+              "total": 49,
+              "won": 25
+            },
+            "dribbles": {
+              "attempts": 22,
+              "success": 13,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 1,
+              "committed": 5
+            },
+            "cards": {
+              "yellow": 1,
               "yellowred": 0,
               "red": 0
             },
@@ -64038,101 +65715,6 @@ window.DADOS_COPA = {
             }
           }
         ]
-      },
-      {
-        "player": {
-          "id": 138835,
-          "name": "F. Balogun",
-          "firstname": "Folarin Jerry",
-          "lastname": "Balogun",
-          "age": 24,
-          "birth": {
-            "date": "2001-07-03",
-            "place": "New York",
-            "country": "USA"
-          },
-          "nationality": "USA",
-          "height": "178",
-          "weight": "66",
-          "injured": false,
-          "photo": "https://media.api-sports.io/football/players/138835.png"
-        },
-        "statistics": [
-          {
-            "team": {
-              "id": 2384,
-              "name": "USA",
-              "logo": "https://media.api-sports.io/football/teams/2384.png"
-            },
-            "league": {
-              "id": 1,
-              "name": "World Cup",
-              "country": "World",
-              "logo": "https://media.api-sports.io/football/leagues/1.png",
-              "flag": null,
-              "season": 2026
-            },
-            "games": {
-              "appearences": 4,
-              "lineups": 4,
-              "minutes": 314,
-              "number": 20,
-              "position": "Attacker",
-              "rating": "6.98",
-              "captain": false
-            },
-            "substitutes": {
-              "in": 0,
-              "out": 3,
-              "bench": 1
-            },
-            "shots": {
-              "total": 11,
-              "on": 5
-            },
-            "goals": {
-              "total": 3,
-              "conceded": 0,
-              "assists": 0,
-              "saves": null
-            },
-            "passes": {
-              "total": 50,
-              "key": null,
-              "accuracy": 62
-            },
-            "tackles": {
-              "total": null,
-              "blocks": null,
-              "interceptions": 1
-            },
-            "duels": {
-              "total": 35,
-              "won": 13
-            },
-            "dribbles": {
-              "attempts": 7,
-              "success": 3,
-              "past": null
-            },
-            "fouls": {
-              "drawn": 8,
-              "committed": 3
-            },
-            "cards": {
-              "yellow": 1,
-              "yellowred": 0,
-              "red": 1
-            },
-            "penalty": {
-              "won": null,
-              "commited": null,
-              "scored": 0,
-              "missed": 0,
-              "saved": null
-            }
-          }
-        ]
       }
     ]
   },
@@ -64183,12 +65765,12 @@ window.DADOS_COPA = {
               "season": 2026
             },
             "games": {
-              "appearences": 7,
-              "lineups": 7,
-              "minutes": 560,
+              "appearences": 8,
+              "lineups": 8,
+              "minutes": 650,
               "number": 11,
               "position": "Midfielder",
-              "rating": "7.39",
+              "rating": "7.34",
               "captain": false
             },
             "substitutes": {
@@ -64197,37 +65779,37 @@ window.DADOS_COPA = {
               "bench": 0
             },
             "shots": {
-              "total": 11,
+              "total": 14,
               "on": 5
             },
             "goals": {
               "total": 0,
               "conceded": 0,
-              "assists": 5,
+              "assists": 7,
               "saves": null
             },
             "passes": {
-              "total": 355,
-              "key": 13,
+              "total": 411,
+              "key": 17,
               "accuracy": 86
             },
             "tackles": {
-              "total": 10,
+              "total": 15,
               "blocks": null,
               "interceptions": 3
             },
             "duels": {
-              "total": 78,
-              "won": 42
+              "total": 92,
+              "won": 48
             },
             "dribbles": {
-              "attempts": 29,
-              "success": 15,
+              "attempts": 34,
+              "success": 16,
               "past": null
             },
             "fouls": {
               "drawn": 16,
-              "committed": 4
+              "committed": 5
             },
             "cards": {
               "yellow": 1,
@@ -64239,6 +65821,101 @@ window.DADOS_COPA = {
               "commited": null,
               "scored": 0,
               "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 278,
+          "name": "Kylian Mbappé",
+          "firstname": "Kylian",
+          "lastname": "Mbappé Lottin",
+          "age": 27,
+          "birth": {
+            "date": "1998-12-20",
+            "place": "Paris",
+            "country": "France"
+          },
+          "nationality": "France",
+          "height": "178",
+          "weight": "75",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/278.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 2,
+              "name": "France",
+              "logo": "https://media.api-sports.io/football/teams/2.png"
+            },
+            "league": {
+              "id": 1,
+              "name": "World Cup",
+              "country": "World",
+              "logo": "https://media.api-sports.io/football/leagues/1.png",
+              "flag": null,
+              "season": 2026
+            },
+            "games": {
+              "appearences": 8,
+              "lineups": 8,
+              "minutes": 698,
+              "number": 10,
+              "position": "Attacker",
+              "rating": "8.21",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 4,
+              "bench": 0
+            },
+            "shots": {
+              "total": 36,
+              "on": 23
+            },
+            "goals": {
+              "total": 10,
+              "conceded": 0,
+              "assists": 4,
+              "saves": null
+            },
+            "passes": {
+              "total": 234,
+              "key": 18,
+              "accuracy": 85
+            },
+            "tackles": {
+              "total": 1,
+              "blocks": null,
+              "interceptions": null
+            },
+            "duels": {
+              "total": 70,
+              "won": 23
+            },
+            "dribbles": {
+              "attempts": 36,
+              "success": 13,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 8,
+              "committed": 6
+            },
+            "cards": {
+              "yellow": 1,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": 1,
+              "commited": null,
+              "scored": 1,
+              "missed": 1,
               "saved": null
             }
           }
@@ -64278,12 +65955,12 @@ window.DADOS_COPA = {
               "season": 2026
             },
             "games": {
-              "appearences": 7,
-              "lineups": 6,
-              "minutes": 620,
+              "appearences": 8,
+              "lineups": 7,
+              "minutes": 740,
               "number": 10,
               "position": "Attacker",
-              "rating": "9.07",
+              "rating": "8.85",
               "captain": false
             },
             "substitutes": {
@@ -64302,27 +65979,27 @@ window.DADOS_COPA = {
               "saves": null
             },
             "passes": {
-              "total": 314,
+              "total": 348,
               "key": 26,
               "accuracy": 81
             },
             "tackles": {
-              "total": 10,
+              "total": 11,
               "blocks": null,
               "interceptions": 1
             },
             "duels": {
-              "total": 90,
-              "won": 51
+              "total": 102,
+              "won": 60
             },
             "dribbles": {
-              "attempts": 35,
-              "success": 24,
+              "attempts": 38,
+              "success": 27,
               "past": null
             },
             "fouls": {
-              "drawn": 16,
-              "committed": 2
+              "drawn": 20,
+              "committed": 3
             },
             "cards": {
               "yellow": 0,
@@ -64626,28 +66303,28 @@ window.DADOS_COPA = {
       },
       {
         "player": {
-          "id": 278,
-          "name": "Kylian Mbappé",
-          "firstname": "Kylian",
-          "lastname": "Mbappé Lottin",
-          "age": 27,
+          "id": 1460,
+          "name": "B. Saka",
+          "firstname": "Bukayo Ayoyinka Temidayo",
+          "lastname": "Saka",
+          "age": 24,
           "birth": {
-            "date": "1998-12-20",
-            "place": "Paris",
-            "country": "France"
+            "date": "2001-09-05",
+            "place": "London",
+            "country": "England"
           },
-          "nationality": "France",
+          "nationality": "England",
           "height": "178",
-          "weight": "75",
+          "weight": "72",
           "injured": false,
-          "photo": "https://media.api-sports.io/football/players/278.png"
+          "photo": "https://media.api-sports.io/football/players/1460.png"
         },
         "statistics": [
           {
             "team": {
-              "id": 2,
-              "name": "France",
-              "logo": "https://media.api-sports.io/football/teams/2.png"
+              "id": 10,
+              "name": "England",
+              "logo": "https://media.api-sports.io/football/teams/10.png"
             },
             "league": {
               "id": 1,
@@ -64659,61 +66336,61 @@ window.DADOS_COPA = {
             },
             "games": {
               "appearences": 7,
-              "lineups": 7,
-              "minutes": 608,
-              "number": 10,
+              "lineups": 3,
+              "minutes": 357,
+              "number": 7,
               "position": "Attacker",
-              "rating": "7.96",
+              "rating": "7.33",
               "captain": false
             },
             "substitutes": {
-              "in": 0,
-              "out": 4,
-              "bench": 0
+              "in": 4,
+              "out": 2,
+              "bench": 5
             },
             "shots": {
-              "total": 30,
-              "on": 19
+              "total": 10,
+              "on": 7
             },
             "goals": {
-              "total": 8,
+              "total": 3,
               "conceded": 0,
               "assists": 3,
               "saves": null
             },
             "passes": {
-              "total": 202,
-              "key": 16,
-              "accuracy": 85
+              "total": 98,
+              "key": 8,
+              "accuracy": 80
             },
             "tackles": {
-              "total": 1,
+              "total": 13,
               "blocks": null,
-              "interceptions": null
+              "interceptions": 1
             },
             "duels": {
-              "total": 55,
-              "won": 21
+              "total": 51,
+              "won": 30
             },
             "dribbles": {
-              "attempts": 29,
-              "success": 11,
+              "attempts": 13,
+              "success": 7,
               "past": null
             },
             "fouls": {
-              "drawn": 8,
-              "committed": 6
+              "drawn": 9,
+              "committed": 4
             },
             "cards": {
-              "yellow": 1,
+              "yellow": 0,
               "yellowred": 0,
               "red": 0
             },
             "penalty": {
-              "won": 1,
+              "won": null,
               "commited": null,
               "scored": 1,
-              "missed": 1,
+              "missed": 0,
               "saved": null
             }
           }
@@ -64859,7 +66536,7 @@ window.DADOS_COPA = {
             "substitutes": {
               "in": 1,
               "out": 4,
-              "bench": 2
+              "bench": 3
             },
             "shots": {
               "total": 5,
@@ -64987,101 +66664,6 @@ window.DADOS_COPA = {
             },
             "fouls": {
               "drawn": 1,
-              "committed": 4
-            },
-            "cards": {
-              "yellow": 0,
-              "yellowred": 0,
-              "red": 0
-            },
-            "penalty": {
-              "won": null,
-              "commited": null,
-              "scored": 0,
-              "missed": 0,
-              "saved": null
-            }
-          }
-        ]
-      },
-      {
-        "player": {
-          "id": 1460,
-          "name": "B. Saka",
-          "firstname": "Bukayo Ayoyinka Temidayo",
-          "lastname": "Saka",
-          "age": 24,
-          "birth": {
-            "date": "2001-09-05",
-            "place": "London",
-            "country": "England"
-          },
-          "nationality": "England",
-          "height": "178",
-          "weight": "72",
-          "injured": false,
-          "photo": "https://media.api-sports.io/football/players/1460.png"
-        },
-        "statistics": [
-          {
-            "team": {
-              "id": 10,
-              "name": "England",
-              "logo": "https://media.api-sports.io/football/teams/10.png"
-            },
-            "league": {
-              "id": 1,
-              "name": "World Cup",
-              "country": "World",
-              "logo": "https://media.api-sports.io/football/leagues/1.png",
-              "flag": null,
-              "season": 2026
-            },
-            "games": {
-              "appearences": 6,
-              "lineups": 2,
-              "minutes": 267,
-              "number": 7,
-              "position": "Attacker",
-              "rating": "7",
-              "captain": false
-            },
-            "substitutes": {
-              "in": 4,
-              "out": 2,
-              "bench": 5
-            },
-            "shots": {
-              "total": 6,
-              "on": 3
-            },
-            "goals": {
-              "total": 0,
-              "conceded": 0,
-              "assists": 3,
-              "saves": null
-            },
-            "passes": {
-              "total": 75,
-              "key": 5,
-              "accuracy": 81
-            },
-            "tackles": {
-              "total": 10,
-              "blocks": null,
-              "interceptions": 1
-            },
-            "duels": {
-              "total": 40,
-              "won": 24
-            },
-            "dribbles": {
-              "attempts": 12,
-              "success": 6,
-              "past": null
-            },
-            "fouls": {
-              "drawn": 7,
               "committed": 4
             },
             "cards": {
@@ -65323,33 +66905,33 @@ window.DADOS_COPA = {
               "season": 2026
             },
             "games": {
-              "appearences": 7,
+              "appearences": 8,
               "lineups": 7,
-              "minutes": 552,
+              "minutes": 597,
               "number": 7,
               "position": "Midfielder",
-              "rating": "7.84",
+              "rating": "7.89",
               "captain": false
             },
             "substitutes": {
-              "in": 0,
+              "in": 1,
               "out": 5,
-              "bench": 0
+              "bench": 1
             },
             "shots": {
-              "total": 13,
-              "on": 8
+              "total": 15,
+              "on": 10
             },
             "goals": {
-              "total": 5,
+              "total": 6,
               "conceded": 0,
               "assists": 2,
               "saves": null
             },
             "passes": {
-              "total": 265,
-              "key": 16,
-              "accuracy": 78
+              "total": 293,
+              "key": 18,
+              "accuracy": 79
             },
             "tackles": {
               "total": 3,
@@ -65357,16 +66939,16 @@ window.DADOS_COPA = {
               "interceptions": null
             },
             "duels": {
-              "total": 30,
-              "won": 13
+              "total": 33,
+              "won": 15
             },
             "dribbles": {
-              "attempts": 12,
-              "success": 5,
+              "attempts": 13,
+              "success": 6,
               "past": null
             },
             "fouls": {
-              "drawn": 3,
+              "drawn": 4,
               "committed": null
             },
             "cards": {
@@ -65861,6 +67443,101 @@ window.DADOS_COPA = {
       },
       {
         "player": {
+          "id": 2937,
+          "name": "D. Rice",
+          "firstname": "Declan",
+          "lastname": "Rice",
+          "age": 26,
+          "birth": {
+            "date": "1999-01-14",
+            "place": "London",
+            "country": "England"
+          },
+          "nationality": "England",
+          "height": "188",
+          "weight": "84",
+          "injured": false,
+          "photo": "https://media.api-sports.io/football/players/2937.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 10,
+              "name": "England",
+              "logo": "https://media.api-sports.io/football/teams/10.png"
+            },
+            "league": {
+              "id": 1,
+              "name": "World Cup",
+              "country": "World",
+              "logo": "https://media.api-sports.io/football/leagues/1.png",
+              "flag": null,
+              "season": 2026
+            },
+            "games": {
+              "appearences": 7,
+              "lineups": 7,
+              "minutes": 571,
+              "number": 4,
+              "position": "Midfielder",
+              "rating": "7.36",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 4,
+              "bench": 1
+            },
+            "shots": {
+              "total": 5,
+              "on": 3
+            },
+            "goals": {
+              "total": 1,
+              "conceded": 0,
+              "assists": 2,
+              "saves": null
+            },
+            "passes": {
+              "total": 331,
+              "key": 17,
+              "accuracy": 92
+            },
+            "tackles": {
+              "total": 11,
+              "blocks": 4,
+              "interceptions": 5
+            },
+            "duels": {
+              "total": 31,
+              "won": 19
+            },
+            "dribbles": {
+              "attempts": 8,
+              "success": 5,
+              "past": null
+            },
+            "fouls": {
+              "drawn": null,
+              "committed": 4
+            },
+            "cards": {
+              "yellow": 2,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
           "id": 78,
           "name": "H. Vanaken",
           "firstname": "Hans",
@@ -65941,101 +67618,6 @@ window.DADOS_COPA = {
             },
             "cards": {
               "yellow": 0,
-              "yellowred": 0,
-              "red": 0
-            },
-            "penalty": {
-              "won": null,
-              "commited": null,
-              "scored": 0,
-              "missed": 0,
-              "saved": null
-            }
-          }
-        ]
-      },
-      {
-        "player": {
-          "id": 9,
-          "name": "A. Hakimi",
-          "firstname": "Achraf",
-          "lastname": "Hakimi Mouh",
-          "age": 27,
-          "birth": {
-            "date": "1998-11-04",
-            "place": "Madrid",
-            "country": "Spain"
-          },
-          "nationality": "Morocco",
-          "height": "181",
-          "weight": "73",
-          "injured": false,
-          "photo": "https://media.api-sports.io/football/players/9.png"
-        },
-        "statistics": [
-          {
-            "team": {
-              "id": 31,
-              "name": "Morocco",
-              "logo": "https://media.api-sports.io/football/teams/31.png"
-            },
-            "league": {
-              "id": 1,
-              "name": "World Cup",
-              "country": "World",
-              "logo": "https://media.api-sports.io/football/leagues/1.png",
-              "flag": null,
-              "season": 2026
-            },
-            "games": {
-              "appearences": 6,
-              "lineups": 6,
-              "minutes": 570,
-              "number": 2,
-              "position": "Defender",
-              "rating": "7.08",
-              "captain": false
-            },
-            "substitutes": {
-              "in": 0,
-              "out": 0,
-              "bench": 0
-            },
-            "shots": {
-              "total": 11,
-              "on": 4
-            },
-            "goals": {
-              "total": 1,
-              "conceded": 0,
-              "assists": 2,
-              "saves": null
-            },
-            "passes": {
-              "total": 400,
-              "key": 17,
-              "accuracy": 89
-            },
-            "tackles": {
-              "total": 12,
-              "blocks": 1,
-              "interceptions": 5
-            },
-            "duels": {
-              "total": 85,
-              "won": 42
-            },
-            "dribbles": {
-              "attempts": 20,
-              "success": 10,
-              "past": null
-            },
-            "fouls": {
-              "drawn": 16,
-              "committed": 7
-            },
-            "cards": {
-              "yellow": 1,
               "yellowred": 0,
               "red": 0
             },
