@@ -1,5 +1,5 @@
 // Snapshot estático do Painel Copa 2026 — gerado em 2026-07-20T23:37:30.859Z
-// Não editar manualmente. Gerado por gerar-dados.js
+// Gerado por gerar-dados.js
 window.DADOS_COPA = {
   "geradoEm": "2026-07-20T23:37:30.859Z",
   "partidas": {
