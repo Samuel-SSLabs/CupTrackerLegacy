@@ -63,7 +63,7 @@ function labelDaFase(roundStr) {
         const numero = r.match(/(\d+)/);
         return numero ? `Fase de Grupos • Rodada ${numero[1]}` : 'Fase de Grupos';
     }
-    if (r.includes('32')) return 'Oitavas de 32';
+    if (r.includes('32')) return '16 avos de Final';
     if (r.includes('16') || r.includes('1/8') || r.includes('oitavas') || r.includes('octavos')) return 'Oitavas de Final';
     if (r.includes('quarter') || r.includes('quartas') || r.includes('1/4')) return 'Quartas de Final';
     if (r.includes('semi') || r.includes('1/2')) return 'Semifinal';
